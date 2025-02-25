@@ -4,283 +4,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ville de Melun - Page d'accueil </title>
+    <title>Ville de Melun - Page d'accueil</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/accessibility.css">
 </head>
 
 <body>
-    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    <!-- Improved skip links -->
+    <div class="skip-links">
+        <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+        <a href="#footer" class="skip-link">Aller au pied de page</a>
+    </div>
     <header>
-        <nav aria-label="Main navigation">
-            <img src="./src/img/ville_de_melun.png" alt="" width="200px">
+        <nav aria-label="Navigation principale">
+            <img src="./src/img/ville_de_melun.png" alt="Logo Ville de Melun" width="200">
             <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="index.html" aria-current="page">Accueil</a></li>
+                <li><a href="#actualites-titre">Actualités</a></li>
+                <li><a href="#agenda-titre">Agenda</a></li>
+                <li><a href="#projets-titre">Grands Projets</a></li>
+                <li><a href="#publications-titre">Publications</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main id="main-content">
-        <section class="carousel" aria-label="Carrousel des actualités principales">
-            <div class="carousel-container" role="region" aria-roledescription="carousel">
+        <section class="carousel" aria-labelledby="carousel-heading">
+            <h2 id="carousel-heading" class="sr-only">Actualités principales</h2>
+            <div class="carousel-container" role="region" aria-roledescription="carrousel">
                 <div class="carousel-slides" aria-live="polite">
-                    <div class="slide" role="group" aria-roledescription="slide" aria-label="1 sur 3">
+                    <div class="slide" role="group" aria-roledescription="diapositive" aria-label="1 sur 3" id="slide1"
+                        aria-hidden="false">
                         <div class="slide-content">
-                            <h1>Ville de Melun</h1>
+                            <h2>Ville de Melun</h2>
                             <p>La ville de Melun est une commune française située dans le département de Seine-et-Marne
-                                en région
-                                Île-de-France.</p>
+                            </p>
                         </div>
                     </div>
-                    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 3">
+                    <div class="slide" role="group" aria-roledescription="diapositive" aria-label="2 sur 3" id="slide2"
+                        aria-hidden="true">
                         <div class="slide-content">
-                            <h1>Événements culturels</h1>
-                            <p>Découvrez les événements culturels à venir dans votre ville.</p>
+                            <h2>Actualités culturelles</h2>
+                            <p>Découvrez les événements et initiatives culturelles de la ville</p>
                         </div>
                     </div>
-                    <div class="slide" role="group" aria-roledescription="slide" aria-label="3 sur 3">
+                    <div class="slide" role="group" aria-roledescription="diapositive" aria-label="3 sur 3" id="slide3"
+                        aria-hidden="true">
                         <div class="slide-content">
-                            <h1>Services municipaux</h1>
-                            <p>Retrouvez tous les services de la ville à votre disposition.</p>
+                            <h2>Services aux citoyens</h2>
+                            <p>Informations et ressources pour les habitants de Melun</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="carousel-controls">
-                    <button class="prev" aria-label="Diapositive précédente" tabindex="0">
-                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    <button class="prev" aria-label="Diapositive précédente">
+                        <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"></path>
                         </svg>
                     </button>
                     <div class="carousel-dots" role="tablist" aria-label="Sélecteur de diapositives">
-                        <button role="tab" tabindex="0" aria-selected="true" aria-label="Diapositive 1"
+                        <button role="tab" aria-selected="true" aria-label="Diapositive 1"
                             aria-controls="slide1"></button>
-                        <button role="tab" tabindex="0" aria-selected="false" aria-label="Diapositive 2"
+                        <button role="tab" aria-selected="false" aria-label="Diapositive 2"
                             aria-controls="slide2"></button>
-                        <button role="tab" tabindex="0" aria-selected="false" aria-label="Diapositive 3"
+                        <button role="tab" aria-selected="false" aria-label="Diapositive 3"
                             aria-controls="slide3"></button>
                     </div>
-                    <button class="next" aria-label="Diapositive suivante" tabindex="0">
-                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                    <button class="next" aria-label="Diapositive suivante">
+                        <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"></path>
                         </svg>
                     </button>
                 </div>
             </div>
         </section>
         <div class="pictograms" role="navigation" aria-label="Accès rapide">
-            <a href="#" aria-label="Services municipaux"><img src="./src/img/PictoClick_1.png" alt=""></a>
-            <a href="#" aria-label="Culture et loisirs"><img src="./src/img/PictoClick_2.png" alt=""></a>
-            <a href="#" aria-label="Education"><img src="./src/img/PictoClick_3.png" alt=""></a>
-            <a href="#" aria-label="Urbanisme"><img src="./src/img/PictoClick_4.png" alt=""></a>
-            <a href="#" aria-label="Sport"><img src="./src/img/PictoClick_5.png" alt=""></a>
-            <a href="#" aria-label="Environnement"><img src="./src/img/PictoClick_6.png" alt=""></a>
+            <a href="#" aria-label="Services municipaux"><img src="./src/img/PictoClick_1.png" alt=""
+                    role="presentation"></a>
+            <a href="#" aria-label="Culture et loisirs"><img src="./src/img/PictoClick_2.png" alt=""
+                    role="presentation"></a>
+            <a href="#" aria-label="Education"><img src="./src/img/PictoClick_3.png" alt="" role="presentation"></a>
+            <a href="#" aria-label="Urbanisme"><img src="./src/img/PictoClick_4.png" alt="" role="presentation"></a>
+            <a href="#" aria-label="Sport"><img src="./src/img/PictoClick_5.png" alt="" role="presentation"></a>
+            <a href="#" aria-label="Environnement"><img src="./src/img/PictoClick_6.png" alt="" role="presentation"></a>
         </div>
         <section class="actualites" aria-labelledby="actualites-titre">
             <h2 id="actualites-titre">Actualités</h2>
             <div class="articles">
-                <article tabindex="0" class="focusable">
-                    <img src="https://www.ville-melun.fr/images/02-EVENTS/2025/2025-03-10_Inscriptions-Scolaires-et-Perisclolaires_SITE-Vignette.jpg"
-                        alt="Festival de musique de Melun">
-                    <span class="tag">Culture</span>
-                    <h3>Festival de musique</h3>
-                    <p>Le festival annuel de musique revient cet été avec une programmation exceptionnelle.</p>
+                <article class="article-card">
+                    <a href="#article-1" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/02-EVENTS/2025/2025-03-10_Inscriptions-Scolaires-et-Perisclolaires_SITE-Vignette.jpg"
+                            alt="" aria-hidden="true">
+                        <span class="tag">Culture</span>
+                        <h3>Festival de musique</h3>
+                        <p>Le festival annuel de musique revient cet été avec une programmation exceptionnelle.</p>
+                    </a>
                 </article>
-                <article tabindex="0" class="focusable">
-                    <img src="https://www.ville-melun.fr/images/02-EVENTS/2025/2025-02-20_PROJET-MEMOIRE_Episode-3_Un-Nouvel-Habitat_SITE-VIGNETTE.jpg"
-                        alt="Marathon de Melun">
-                    <span class="tag">Sport</span>
-                    <h3>Marathon de Melun</h3>
-                    <p>Participez au marathon qui traversera les plus beaux quartiers de la ville.</p>
+                <article class="article-card">
+                    <a href="#article-2" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/02-EVENTS/2025/2025-02-20_PROJET-MEMOIRE_Episode-3_Un-Nouvel-Habitat_SITE-VIGNETTE.jpg"
+                            alt="" aria-hidden="true">
+                        <span class="tag">Sport</span>
+                        <h3>Marathon de Melun</h3>
+                        <p>Participez au marathon qui traversera les plus beaux quartiers de la ville.</p>
+                    </a>
                 </article>
-                <article tabindex="0" class="focusable">
-                    <img src="https://www.ville-melun.fr/images/02-EVENTS/03-Journee-Internationale-Droits-Femmes/2024-03-08_JIDF_SITE-2.jpg"
-                        alt="Nouveaux espaces verts de Melun">
-                    <span class="tag">Environnement</span>
-                    <h3>Nouveaux espaces verts</h3>
-                    <p>La ville inaugure trois nouveaux parcs pour améliorer le cadre de vie des habitants.</p>
+                <article class="article-card">
+                    <a href="#article-3" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/02-EVENTS/03-Journee-Internationale-Droits-Femmes/2024-03-08_JIDF_SITE-2.jpg"
+                            alt="" aria-hidden="true">
+                        <span class="tag">Environnement</span>
+                        <h3>Nouveaux espaces verts</h3>
+                        <p>La ville inaugure trois nouveaux parcs pour améliorer le cadre de vie des habitants.</p>
+                    </a>
                 </article>
-                <article tabindex="0" class="focusable">
-                    <img src="https://www.ville-melun.fr/images/Retour_IFOP.png" alt="Rentrée scolaire de Melun">
-                    <span class="tag">Education</span>
-                    <h3>Rentrée scolaire</h3>
-                    <p>Toutes les informations importantes pour préparer la rentrée scolaire 2024.</p>
+                <article class="article-card">
+                    <a href="#article-4" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/Retour_IFOP.png" alt="" aria-hidden="true">
+                        <span class="tag">Education</span>
+                        <h3>Rentrée scolaire</h3>
+                        <p>Toutes les informations importantes pour préparer la rentrée scolaire 2024.</p>
+                    </a>
                 </article>
             </div>
         </section>
         <section class="agenda" aria-labelledby="agenda-titre">
             <h2 id="agenda-titre">Agenda</h2>
             <div class="events-grid">
-                <article class="event-card" tabindex="0">
-                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_2024-budget-participatif-rubrique.jpg"
-                        alt="Concert de jazz">
-                    <time datetime="2024-03-15T20:00">15 Mars 2024 - 20h00</time>
-                    <h3>Concert de Jazz</h3>
-                    <address>Espace Saint-Jean</address>
+                <article class="event-card">
+                    <a href="#event-1" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_2024-budget-participatif-rubrique.jpg"
+                            alt="" aria-hidden="true">
+                        <time datetime="2024-03-15T20:00">15 Mars 2024 - 20h00</time>
+                        <h3>Concert de Jazz</h3>
+                        <address>Espace Saint-Jean</address>
+                    </a>
+                </article>
+                <article class="event-card">
+                    <a href="#event-2" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_gabarit-vis-ma-vie-site.png"
+                            alt="" aria-hidden="true">
+                        <time datetime="2024-03-20T14:00">20 Mars 2024 - 14h00</time>
+                        <h3>Exposition d'Art Moderne</h3>
+                        <address>Musée d'Art</address>
+                    </a>
                 </article>
                 <article class="event-card" tabindex="0">
-                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_gabarit-vis-ma-vie-site.png"
-                        alt="Exposition d'art">
-                    <time datetime="2024-03-20T14:00">20 Mars 2024 - 14h00</time>
-                    <h3>Exposition d'Art Moderne</h3>
-                    <address>Musée d'Art</address>
+                    <a href="#event-3" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_permanence-des-elus-marche-gaillardon-site.jpg"
+                            alt="Théâtre">
+                        <time datetime="2024-03-25T19:30">25 Mars 2024 - 19h30</time>
+                        <h3>Pièce de Théâtre</h3>
+                        <address>Théâtre Municipal</address>
+                    </a>
                 </article>
                 <article class="event-card" tabindex="0">
-                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_permanence-des-elus-marche-gaillardon-site.jpg"
-                        alt="Théâtre">
-                    <time datetime="2024-03-25T19:30">25 Mars 2024 - 19h30</time>
-                    <h3>Pièce de Théâtre</h3>
-                    <address>Théâtre Municipal</address>
+                    <a href="#event-4" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_2023-10-17-cm-melun.jpg"
+                            alt="Marché local">
+                        <time datetime="2024-03-30T09:00">30 Mars 2024 - 9h00</time>
+                        <h3>Marché des Producteurs</h3>
+                        <address>Place Saint-Jean</address>
+                    </a>
                 </article>
                 <article class="event-card" tabindex="0">
-                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_2023-10-17-cm-melun.jpg"
-                        alt="Marché local">
-                    <time datetime="2024-03-30T09:00">30 Mars 2024 - 9h00</time>
-                    <h3>Marché des Producteurs</h3>
-                    <address>Place Saint-Jean</address>
+                    <a href="#event-5" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_salonenfance25.png"
+                            alt="Festival de danse">
+                        <time datetime="2024-04-05T18:00">5 Avril 2024 - 18h00</time>
+                        <h3>Festival de Danse</h3>
+                        <address>Gymnase Municipal</address>
+                    </a>
                 </article>
                 <article class="event-card" tabindex="0">
-                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_salonenfance25.png"
-                        alt="Festival de danse">
-                    <time datetime="2024-04-05T18:00">5 Avril 2024 - 18h00</time>
-                    <h3>Festival de Danse</h3>
-                    <address>Gymnase Municipal</address>
+                    <a href="#event-6" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_permanence-des-elus-marche-montaigu-site.jpg"
+                            alt="Conférence">
+                        <time datetime="2024-04-10T15:00">10 Avril 2024 - 15h00</time>
+                        <h3>Conférence Histoire</h3>
+                        <address>Médiathèque</address>
+                    </a>
                 </article>
                 <article class="event-card" tabindex="0">
-                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_permanence-des-elus-marche-montaigu-site.jpg"
-                        alt="Conférence">
-                    <time datetime="2024-04-10T15:00">10 Avril 2024 - 15h00</time>
-                    <h3>Conférence Histoire</h3>
-                    <address>Médiathèque</address>
+                    <a href="#event-7" class="card-link">
+                        <img src="https://www.seine-et-marne.fr/sites/default/files/media/images/chateau-blandy-2023.jpg"
+                            alt="Concert classique">
+                        <time datetime="2024-04-15T20:30">15 Avril 2024 - 20h30</time>
+                        <h3>Concert Classique</h3>
+                        <address>Conservatoire</address>
+                    </a>
                 </article>
                 <article class="event-card" tabindex="0">
-                    <img src="https://www.seine-et-marne.fr/sites/default/files/media/images/chateau-blandy-2023.jpg"
-                        alt="Concert classique">
-                    <time datetime="2024-04-15T20:30">15 Avril 2024 - 20h30</time>
-                    <h3>Concert Classique</h3>
-                    <address>Conservatoire</address>
-                </article>
-                <article class="event-card" tabindex="0">
-                    <img src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/74/241/23392586.jpg"
-                        alt="Atelier cuisine">
-                    <time datetime="2024-04-20T14:30">20 Avril 2024 - 14h30</time>
-                    <h3>Atelier Cuisine</h3>
-                    <address>Centre Culturel</address>
+                    <a href="#event-8" class="card-link">
+                        <img src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/74/241/23392586.jpg"
+                            alt="Atelier cuisine">
+                        <time datetime="2024-04-20T14:30">20 Avril 2024 - 14h30</time>
+                        <h3>Atelier Cuisine</h3>
+                        <address>Centre Culturel</address>
+                    </a>
                 </article>
             </div>
         </section>
-        <section class="grand-projets">
-            <h2>Grands Projets</h2>
+        <section class="grand-projets" aria-labelledby="projets-titre">
+            <h2 id="projets-titre">Grands Projets</h2>
             <div class="projets-grid">
                 <article class="projet-card">
-                    <img src="https://www.ville-melun.fr/images/Grands-projets/CINEMA/2022-01-01_Cinema_Centre_Ville_Projection_SITE-GRANDS-PROJETS.jpg"
-                        alt="Rénovation du musée d'art contemporain">
-                    <div class="projet-content">
-                        <span class="status in-progress">En cours</span>
-                        <h3>Rénovation du musée d'art contemporain</h3>
-                        <p>Projet majeur de restructuration et d'agrandissement du musée d'art contemporain, offrant de
-                            nouveaux
-                            espaces d'exposition et une meilleure accessibilité.</p>
-                        <a href="#" class="btn">En savoir plus</a>
-                    </div>
+                    <a href="#projet-1" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/Grands-projets/CINEMA/2022-01-01_Cinema_Centre_Ville_Projection_SITE-GRANDS-PROJETS.jpg"
+                            alt="" aria-hidden="true">
+                        <div class="projet-content">
+                            <span class="status in-progress">En cours</span>
+                            <h3>Rénovation du musée d'art contemporain</h3>
+                            <p>Projet majeur de restructuration et d'agrandissement du musée d'art contemporain, offrant
+                                de
+                                nouveaux
+                                espaces d'exposition et une meilleure accessibilité.</p>
+                            <a href="#" class="btn">En savoir plus</a>
+                        </div>
+                    </a>
                 </article>
-
                 <article class="projet-card">
-                    <img src="https://www.ville-melun.fr/images/Grands-projets/COEURDEVILLE/2021-03-22-Action_Coeur-Ville_SITE-GRANDS-PROJETS.jpg"
-                        alt="Centre culturel interdisciplinaire">
-                    <div class="projet-content">
-                        <span class="status planned">Planifié</span>
-                        <h3>Centre culturel interdisciplinaire</h3>
-                        <p>Création d'un nouveau lieu de vie culturelle au cœur de la ville, regroupant théâtre, salle
-                            de
-                            concert, ateliers et espaces d'exposition.</p>
-                        <a href="#" class="btn">En savoir plus</a>
-                    </div>
+                    <a href="#projet-2" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/Grands-projets/COEURDEVILLE/2021-03-22-Action_Coeur-Ville_SITE-GRANDS-PROJETS.jpg"
+                            alt="" aria-hidden="true">
+                        <div class="projet-content">
+                            <span class="status planned">Planifié</span>
+                            <h3>Centre culturel interdisciplinaire</h3>
+                            <p>Création d'un nouveau lieu de vie culturelle au cœur de la ville, regroupant théâtre,
+                                salle
+                                de
+                                concert, ateliers et espaces d'exposition.</p>
+                            <a href="#" class="btn">En savoir plus</a>
+                        </div>
+                    </a>
                 </article>
-
                 <article class="projet-card">
-                    <img src="https://www.ville-melun.fr/images/Grands-projets/Tzen2/2023-07-01_TZEN2_VIGNETTE.jpg"
-                        alt="Parcours d'art urbain">
-                    <div class="projet-content">
-                        <span class="status completed">Terminé</span>
-                        <h3>Parcours d'art urbain</h3>
-                        <p>Installation de 15 œuvres d'art contemporain dans l'espace public, créant un parcours
-                            artistique à
-                            travers la ville accessible à tous.</p>
-                        <a href="#" class="btn">En savoir plus</a>
-                    </div>
+                    <a href="#projet-3" class="card-link">
+                        <img src="https://www.ville-melun.fr/images/Grands-projets/Tzen2/2023-07-01_TZEN2_VIGNETTE.jpg"
+                            alt="" aria-hidden="true">
+                        <div class="projet-content">
+                            <span class="status completed">Terminé</span>
+                            <h3>Parcours d'art urbain</h3>
+                            <p>Installation de 15 œuvres d'art contemporain dans l'espace public, créant un parcours
+                                artistique à
+                                travers la ville accessible à tous.</p>
+                            <a href="#" class="btn">En savoir plus</a>
+                        </div>
+                    </a>
                 </article>
             </div>
         </section>
 
         <!-- Publications Section -->
-        <section class="publications">
-            <h2>Publications</h2>
+        <section class="publications" aria-labelledby="publications-titre">
+            <h2 id="publications-titre">Publications</h2>
             <div class="magazines-grid">
                 <article class="magazine-card">
-                    <div class="magazine-cover">
-                        <img src="https://www.ville-melun.fr/images/publications/MelunMag128_400x600.jpg"
-                            alt="Revue des Arts et de la Culture - Édition Printemps 2023">
-                    </div>
-                    <div class="magazine-info">
-                        <h3>Revue des Arts et de la Culture</h3>
-                        <time datetime="2023-03">Mars 2023</time>
-                        <a href="#" class="btn">Lire</a>
-                    </div>
+                    <a href="#magazine-1" class="card-link">
+                        <div class="magazine-cover">
+                            <img src="https://www.ville-melun.fr/images/publications/MelunMag128_400x600.jpg" alt=""
+                                aria-hidden="true">
+                        </div>
+                        <div class="magazine-info">
+                            <h3>Revue des Arts et de la Culture</h3>
+                            <time datetime="2023-03">Mars 2023</time>
+                            <a href="#" class="btn">Lire</a>
+                        </div>
+                    </a>
                 </article>
 
                 <article class="magazine-card">
-                    <div class="magazine-cover">
-                        <img src="https://www.ville-melun.fr/images/publications/03_LETTRES-DU-MAIRE/2025-01_Lettre-du-Maire-5_CENTRE-VILLE.jpg"
-                            alt="Patrimoine Magazine - Édition Été 2023">
-                    </div>
-                    <div class="magazine-info">
-                        <h3>Patrimoine Magazine</h3>
-                        <time datetime="2023-06">Juin 2023</time>
-                        <a href="#" class="btn">Lire</a>
-                    </div>
+                    <a href="#magazine-2" class="card-link">
+                        <div class="magazine-cover">
+                            <img src="https://www.ville-melun.fr/images/publications/03_LETTRES-DU-MAIRE/2025-01_Lettre-du-Maire-5_CENTRE-VILLE.jpg"
+                                alt="" aria-hidden="true">
+                        </div>
+                        <div class="magazine-info">
+                            <h3>Patrimoine Magazine</h3>
+                            <time datetime="2023-06">Juin 2023</time>
+                            <a href="#" class="btn">Lire</a>
+                        </div>
+                    </a>
                 </article>
 
                 <article class="magazine-card">
-                    <div class="magazine-cover">
-                        <img src="https://www.ville-melun.fr/images/publications/MelunMag127_400x600.jpg"
-                            alt="Culture pour Tous - Édition Automne 2023">
-                    </div>
-                    <div class="magazine-info">
-                        <h3>Culture pour Tous</h3>
-                        <time datetime="2023-09">Septembre 2023</time>
-                        <a href="#" class="btn">Lire</a>
-                    </div>
+                    <a href="#magazine-3" class="card-link">
+                        <div class="magazine-cover">
+                            <img src="https://www.ville-melun.fr/images/publications/MelunMag127_400x600.jpg" alt=""
+                                aria-hidden="true">
+                        </div>
+                        <div class="magazine-info">
+                            <h3>Culture pour Tous</h3>
+                            <time datetime="2023-09">Septembre 2023</time>
+                            <a href="#" class="btn">Lire</a>
+                        </div>
+                    </a>
                 </article>
 
                 <article class="magazine-card">
-                    <div class="magazine-cover">
-                        <img src="https://www.ville-melun.fr/images/publications/MelunMag126_400x600.jpg"
-                            alt="Arts en Scène - Édition Hiver 2023">
-                    </div>
-                    <div class="magazine-info">
-                        <h3>Arts en Scène</h3>
-                        <time datetime="2023-12">Décembre 2023</time>
-                        <a href="#" class="btn">Lire</a>
-                    </div>
+                    <a href="#magazine-4" class="card-link">
+                        <div class="magazine-cover">
+                            <img src="https://www.ville-melun.fr/images/publications/MelunMag126_400x600.jpg" alt=""
+                                aria-hidden="true">
+                        </div>
+                        <div class="magazine-info">
+                            <h3>Arts en Scène</h3>
+                            <time datetime="2023-12">Décembre 2023</time>
+                            <a href="#" class="btn">Lire</a>
+                        </div>
+                    </a>
                 </article>
 
                 <article class="magazine-card">
-                    <div class="magazine-cover">
-                        <img src="https://www.ville-melun.fr/images/publications/02_RAPPORTS/2022-rapport-d-activite_400x600.jpg    "
-                            alt="Perspectives Culturelles - Édition Printemps 2024">
-                    </div>
-                    <div class="magazine-info">
-                        <h3>Perspectives Culturelles</h3>
-                        <time datetime="2024-03">Mars 2024</time>
-                        <a href="#" class="btn">Lire</a>
-                    </div>
+                    <a href="#magazine-5" class="card-link">
+                        <div class="magazine-cover">
+                            <img src="https://www.ville-melun.fr/images/publications/02_RAPPORTS/2022-rapport-d-activite_400x600.jpg    "
+                                alt="" aria-hidden="true">
+                        </div>
+                        <div class="magazine-info">
+                            <h3>Perspectives Culturelles</h3>
+                            <time datetime="2024-03">Mars 2024</time>
+                            <a href="#" class="btn">Lire</a>
+                        </div>
+                    </a>
                 </article>
             </div>
         </section>
     </main>
-    <footer role="contentinfo"></footer>
+
+    <footer id="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Ville de Melun</h2>
+                <address>
+                    Hôtel de Ville<br>
+                    16 Rue Paul Doumer<br>
+                    77000 Melun<br>
+                    <a href="tel:+33164525000">01 64 52 50 00</a>
+                </address>
+            </div>
+            <div class="footer-section">
+                <h2>Liens rapides</h2>
+                <ul>
+                    <li><a href="#" id="accessibility-link">Accessibilité</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
     <script src="./src/js/carousel.js"></script>
     <script src="./src/js/focus-manager.js"></script>
+    <script src="./src/js/accessibility.js"></script>
 </body>
 
 </html>
