@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header>
         <nav aria-label="Main navigation">
             <img src="./src/img/ville_de_melun.png" alt="" width="200px">
@@ -18,8 +19,159 @@
             </ul>
         </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main id="main-content">
+        <section class="carousel" aria-label="Carrousel des actualités principales">
+            <div class="carousel-container" role="region" aria-roledescription="carousel">
+                <div class="carousel-slides" aria-live="polite">
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="1 sur 3">
+                        <div class="slide-content">
+                            <h1>Ville de Melun</h1>
+                            <p>La ville de Melun est une commune française située dans le département de Seine-et-Marne
+                                en région
+                                Île-de-France.</p>
+                        </div>
+                    </div>
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 sur 3">
+                        <div class="slide-content">
+                            <h1>Événements culturels</h1>
+                            <p>Découvrez les événements culturels à venir dans votre ville.</p>
+                        </div>
+                    </div>
+                    <div class="slide" role="group" aria-roledescription="slide" aria-label="3 sur 3">
+                        <div class="slide-content">
+                            <h1>Services municipaux</h1>
+                            <p>Retrouvez tous les services de la ville à votre disposition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="prev" aria-label="Diapositive précédente" tabindex="0">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                    </button>
+                    <div class="carousel-dots" role="tablist" aria-label="Sélecteur de diapositives">
+                        <button role="tab" tabindex="0" aria-selected="true" aria-label="Diapositive 1"
+                            aria-controls="slide1"></button>
+                        <button role="tab" tabindex="0" aria-selected="false" aria-label="Diapositive 2"
+                            aria-controls="slide2"></button>
+                        <button role="tab" tabindex="0" aria-selected="false" aria-label="Diapositive 3"
+                            aria-controls="slide3"></button>
+                    </div>
+                    <button class="next" aria-label="Diapositive suivante" tabindex="0">
+                        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div class="pictograms" role="navigation" aria-label="Accès rapide">
+            <a href="#" aria-label="Services municipaux"><img src="./src/img/PictoClick_1.png" alt=""></a>
+            <a href="#" aria-label="Culture et loisirs"><img src="./src/img/PictoClick_2.png" alt=""></a>
+            <a href="#" aria-label="Education"><img src="./src/img/PictoClick_3.png" alt=""></a>
+            <a href="#" aria-label="Urbanisme"><img src="./src/img/PictoClick_4.png" alt=""></a>
+            <a href="#" aria-label="Sport"><img src="./src/img/PictoClick_5.png" alt=""></a>
+            <a href="#" aria-label="Environnement"><img src="./src/img/PictoClick_6.png" alt=""></a>
+        </div>
+        <section class="actualites" aria-labelledby="actualites-titre">
+            <h2 id="actualites-titre">Actualités</h2>
+            <div class="articles">
+                <article tabindex="0" class="focusable">
+                    <img src="https://www.ville-melun.fr/images/02-EVENTS/2025/2025-03-10_Inscriptions-Scolaires-et-Perisclolaires_SITE-Vignette.jpg"
+                        alt="Festival de musique de Melun">
+                    <span class="tag">Culture</span>
+                    <h3>Festival de musique</h3>
+                    <p>Le festival annuel de musique revient cet été avec une programmation exceptionnelle.</p>
+                </article>
+                <article tabindex="0" class="focusable">
+                    <img src="https://www.ville-melun.fr/images/02-EVENTS/2025/2025-02-20_PROJET-MEMOIRE_Episode-3_Un-Nouvel-Habitat_SITE-VIGNETTE.jpg"
+                        alt="Marathon de Melun">
+                    <span class="tag">Sport</span>
+                    <h3>Marathon de Melun</h3>
+                    <p>Participez au marathon qui traversera les plus beaux quartiers de la ville.</p>
+                </article>
+                <article tabindex="0" class="focusable">
+                    <img src="https://www.ville-melun.fr/images/02-EVENTS/03-Journee-Internationale-Droits-Femmes/2024-03-08_JIDF_SITE-2.jpg"
+                        alt="Nouveaux espaces verts de Melun">
+                    <span class="tag">Environnement</span>
+                    <h3>Nouveaux espaces verts</h3>
+                    <p>La ville inaugure trois nouveaux parcs pour améliorer le cadre de vie des habitants.</p>
+                </article>
+                <article tabindex="0" class="focusable">
+                    <img src="https://www.ville-melun.fr/images/Retour_IFOP.png" alt="Rentrée scolaire de Melun">
+                    <span class="tag">Education</span>
+                    <h3>Rentrée scolaire</h3>
+                    <p>Toutes les informations importantes pour préparer la rentrée scolaire 2024.</p>
+                </article>
+            </div>
+        </section>
+        <section class="agenda" aria-labelledby="agenda-titre">
+            <h2 id="agenda-titre">Agenda</h2>
+            <div class="events-grid">
+                <article class="event-card" tabindex="0">
+                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_2024-budget-participatif-rubrique.jpg"
+                        alt="Concert de jazz">
+                    <time datetime="2024-03-15T20:00">15 Mars 2024 - 20h00</time>
+                    <h3>Concert de Jazz</h3>
+                    <address>Espace Saint-Jean</address>
+                </article>
+                <article class="event-card" tabindex="0">
+                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_gabarit-vis-ma-vie-site.png"
+                        alt="Exposition d'art">
+                    <time datetime="2024-03-20T14:00">20 Mars 2024 - 14h00</time>
+                    <h3>Exposition d'Art Moderne</h3>
+                    <address>Musée d'Art</address>
+                </article>
+                <article class="event-card" tabindex="0">
+                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_permanence-des-elus-marche-gaillardon-site.jpg"
+                        alt="Théâtre">
+                    <time datetime="2024-03-25T19:30">25 Mars 2024 - 19h30</time>
+                    <h3>Pièce de Théâtre</h3>
+                    <address>Théâtre Municipal</address>
+                </article>
+                <article class="event-card" tabindex="0">
+                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_2023-10-17-cm-melun.jpg"
+                        alt="Marché local">
+                    <time datetime="2024-03-30T09:00">30 Mars 2024 - 9h00</time>
+                    <h3>Marché des Producteurs</h3>
+                    <address>Place Saint-Jean</address>
+                </article>
+                <article class="event-card" tabindex="0">
+                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_salonenfance25.png"
+                        alt="Festival de danse">
+                    <time datetime="2024-04-05T18:00">5 Avril 2024 - 18h00</time>
+                    <h3>Festival de Danse</h3>
+                    <address>Gymnase Municipal</address>
+                </article>
+                <article class="event-card" tabindex="0">
+                    <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_permanence-des-elus-marche-montaigu-site.jpg"
+                        alt="Conférence">
+                    <time datetime="2024-04-10T15:00">10 Avril 2024 - 15h00</time>
+                    <h3>Conférence Histoire</h3>
+                    <address>Médiathèque</address>
+                </article>
+                <article class="event-card" tabindex="0">
+                    <img src="https://www.seine-et-marne.fr/sites/default/files/media/images/chateau-blandy-2023.jpg"
+                        alt="Concert classique">
+                    <time datetime="2024-04-15T20:30">15 Avril 2024 - 20h30</time>
+                    <h3>Concert Classique</h3>
+                    <address>Conservatoire</address>
+                </article>
+                <article class="event-card" tabindex="0">
+                    <img src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/74/241/23392586.jpg"
+                        alt="Atelier cuisine">
+                    <time datetime="2024-04-20T14:30">20 Avril 2024 - 14h30</time>
+                    <h3>Atelier Cuisine</h3>
+                    <address>Centre Culturel</address>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo"></footer>
+    <script src="./src/js/carousel.js"></script>
+    <script src="./src/js/focus-manager.js"></script>
 </body>
 
 </html>

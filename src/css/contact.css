@@ -1,0 +1,41 @@
+body {
+    background-color: #EFEFEF;
+}
+
+
+form {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 20px;
+    border: 2px solid  #10162F;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid  #10162F;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+
+  button {
+    background-color: #10162F;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
