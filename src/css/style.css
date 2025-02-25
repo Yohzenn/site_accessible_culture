@@ -1,63 +1,480 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 header {
-    background-color: #10162f;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 7rem;
+	background-color: #10162f;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 7rem;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    list-style-type: none;
-    
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	list-style-type: none;
 }
-
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
 }
 nav ul li {
-    font-size: 1.2rem;
-    list-style-type: none;
-    position: relative;
+	font-size: 1.2rem;
+	list-style-type: none;
+	position: relative;
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
-    position: relative;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
 }
 
 nav ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: -6px; /* Position sous le texte */
-  left: 100%; /* Départ à droite */
-  width: 0%;
-  height: 3px;
-  background-color: white; /* Couleur de la barre */
-  transition: all 0.3s ease-in-out;
+	content: "";
+	position: absolute;
+	bottom: -6px; /* Position sous le texte */
+	left: 100%; /* Départ à droite */
+	width: 0%;
+	height: 3px;
+	background-color: white; /* Couleur de la barre */
+	transition: all 0.3s ease-in-out;
 }
-
 
 nav ul li a:hover::after {
-  left: 0%; /* Fait partir de la droite vers la gauche */
-  width: 100%; /* Barre complète */
+	left: 0%; /* Fait partir de la droite vers la gauche */
+	width: 100%; /* Barre complète */
 }
 
+.hero {
+	background-image: url("https://www.ville-melun.fr/images/02-EVENTS/03-Journee-Internationale-Droits-Femmes/2024-03-08_JIDF_SITE-2.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	color: white;
+	text-align: right;
+	padding: 12rem;
+}
+
+.hero h1 {
+	background: white none repeat scroll 0% 0%;
+	color: black;
+	padding: 1%;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.hero p {
+	padding: 1%;
+	background: rgba(0, 0, 0, 0.4) none repeat scroll 0% 0%;
+	font-size: 1.2rem;
+	max-width: 800px;
+}
+
+.carousel {
+	position: relative;
+	height: 80vh;
+	background: #10162f;
+}
+
+.carousel-container {
+	height: 100%;
+	position: relative;
+}
+
+.carousel-slides {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide[aria-hidden="false"] {
+	opacity: 1;
+	z-index: 1;
+}
+
+.slide:nth-child(1) {
+	background-image: url("https://www.ville-melun.fr/images/02-EVENTS/03-Journee-Internationale-Droits-Femmes/2024-03-08_JIDF_SITE-2.jpg");
+}
+
+.slide:nth-child(2) {
+	background-image: url("https://www.ville-melun.fr/images/02-EVENTS/2025/2025-03-10_Inscriptions-Scolaires-et-Perisclolaires_SITE-Vignette.jpg");
+}
+
+.slide:nth-child(3) {
+	background-image: url("https://www.ville-melun.fr/images/02-EVENTS/2025/2025-02-20_PROJET-MEMOIRE_Episode-3_Un-Nouvel-Habitat_SITE-VIGNETTE.jpg");
+}
+
+.slide-content {
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	transform: translateY(-50%);
+	max-width: 600px;
+	padding: 2rem;
+	color: white;
+	text-align: right;
+}
+
+.slide-content h1 {
+	background: white;
+	color: black;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	display: inline-block;
+}
+
+.slide-content p {
+	background: rgba(0, 0, 0, 0.7);
+	padding: 1rem;
+}
+
+.carousel-controls {
+	position: absolute;
+	bottom: 2rem;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	z-index: 2;
+}
+
+.carousel-controls button {
+	background: rgba(255, 255, 255, 0.2);
+	border: 2px solid white;
+	color: white;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.carousel-controls button:hover,
+.carousel-controls button:focus {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-controls button:focus-visible {
+	outline: 3px solid #2563eb;
+	outline-offset: 2px;
+}
+
+.carousel-dots {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.carousel-dots button {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	border: 2px solid white;
+	padding: 0;
+}
+
+.carousel-dots button[aria-selected="true"] {
+	background: white;
+}
+
+.pictograms {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 2rem;
+	padding: 4rem 8rem;
+	background-color: #f5f5f5;
+}
+
+.pictograms img {
+	width: 100%;
+	max-width: 150px;
+	transition: transform 0.3s ease;
+}
+
+.pictograms a {
+	text-align: center;
+}
+
+.pictograms a:hover img {
+	transform: scale(1.1);
+}
+
+.actualites {
+	padding: 4rem 8rem;
+}
+
+.actualites h2 {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-bottom: 3rem;
+	color: #10162f;
+}
+
+.articles {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+}
+
+.articles article {
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	border: 2px solid transparent;
+}
+
+.articles article:hover {
+	transform: translateY(-5px);
+	border-color: #2563eb;
+}
+
+.articles article:focus-within {
+	border-color: #2563eb;
+}
+
+.articles img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.articles .tag {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background-color: #1a365d !important; /* Darker blue for better contrast */
+	color: white;
+	border-radius: 4px;
+	margin: 1rem;
+}
+
+.articles h3 {
+	padding: 0 1rem;
+	margin-bottom: 0.5rem;
+	color: #10162f;
+}
+
+.articles p {
+	padding: 0 1rem 1rem;
+	color: #374151 !important; /* Darker gray for better contrast */
+}
+
+/* Improved focus styles */
+:focus {
+	outline: 3px solid #2563eb;
+	outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+:focus-visible {
+	outline: 3px solid #2563eb;
+	outline-offset: 3px;
+	box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2);
+}
+
+/* Skip link */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #2563eb;
+	color: white;
+	padding: 8px;
+	z-index: 100;
+	transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+	top: 0;
+}
+
+/* Improve focus for navigation */
+nav a:focus-visible {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 4px;
+}
+
+/* Agenda Styles */
+.agenda {
+	padding: 4rem 8rem;
+	background-color: #f5f5f5;
+}
+
+.agenda h2 {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-bottom: 3rem;
+	color: #10162f;
+}
+
+.events-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2rem;
+	margin: 0 auto;
+}
+
+.event-card {
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+	transform: translateY(-5px);
+}
+
+.event-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.event-card time {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	background-color: #293b74;
+	color: white;
+	font-size: 0.9rem;
+	margin: 1rem;
+	border-radius: 4px;
+}
+
+.event-card h3 {
+	padding: 0 1rem;
+	margin-bottom: 0.5rem;
+	color: #10162f;
+	font-size: 1.2rem;
+}
+
+.event-card address {
+	padding: 0 1rem 1rem;
+	color: #666;
+	font-style: normal;
+	font-size: 0.9rem;
+}
+
+/* Specific styles for icagenda items */
+.icrounded_eventlist {
+	margin-bottom: 2rem;
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ic-block.agenda_image img {
+	width: 100%;
+	height: 177px;
+	object-fit: cover;
+}
+
+.ic-date-img-box {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border-radius: 4px;
+}
+
+.ic-datetime-div {
+	font-size: 0.9rem;
+	margin: 1rem;
+}
+
+.iceventlist-title {
+	padding: 1rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #10162f;
+}
+
+.iceventlist-venue {
+	padding: 0 1rem 1rem;
+	color: #666;
+	font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+	.agenda {
+		padding: 4rem 4rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.agenda {
+		padding: 4rem 2rem;
+	}
+
+	.events-grid {
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	}
+}
+
+/* Focus styles */
+:focus {
+	outline: 2px solid #0066cc;
+	outline-offset: 2px;
+}
+
+.skip-link:focus {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 10px;
+	background: #ffffff;
+	z-index: 9999;
+}
+
+.carousel button:focus,
+.pictograms a:focus,
+.event-card:focus {
+	outline: 2px solid #0066cc;
+	outline-offset: 4px;
+	box-shadow: 0 0 8px rgba(0, 102, 204, 0.5);
+}
+
+/* Add smooth scrolling to the page */
+html {
+	scroll-behavior: smooth;
+}
