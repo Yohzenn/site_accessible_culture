@@ -1,0 +1,259 @@
+/* Accessibility CSS - To be included after the main CSS */
+
+/* Improved Skip links for keyboard users - with better contrast */
+.skip-links {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: #0056b3; /* Darker blue for better contrast */
+	color: white;
+	padding: 10px 15px;
+	font-weight: bold;
+	transition: top 0.3s ease;
+	z-index: 100;
+	border: 2px solid transparent;
+	text-decoration: none;
+}
+
+.skip-link:focus {
+	top: 0;
+	outline: 3px solid #ffbf47; /* High visibility focus outline */
+	outline-offset: 2px;
+	border-color: #000;
+}
+
+/* Screen reader only class - visually hidden but accessible to screen readers */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+/* Improved Focus styles - ensure they stand out with consistent appearance */
+:focus {
+	outline: 2px solid #ffcc00;
+	outline-offset: 2px;
+}
+
+/* Specific focus style for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 2px solid #ffcc00;
+	outline-offset: 2px;
+	text-decoration: underline;
+}
+
+/* Focus style for cards - modified to prevent double focus issues */
+.article-card .card-link:focus,
+.event-card .card-link:focus,
+.projet-card .card-link:focus,
+.magazine-card .card-link:focus {
+	outline: 3px solid #ffcc00;
+	outline-offset: 3px;
+}
+
+/* Remove tabindex focus from cards */
+.article-card:focus,
+.event-card:focus,
+.projet-card:focus,
+.magazine-card:focus {
+	outline: none;
+}
+
+/* Card link styling */
+.card-link {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	height: 100%;
+}
+
+/* Status indicators with both color and text for colorblind users */
+.status {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+
+.status.completed {
+	background-color: #4caf50;
+	color: white;
+}
+
+.status.in-progress {
+	background-color: #ff9800;
+	color: black;
+}
+
+.status.planned {
+	background-color: #2196f3;
+	color: white;
+}
+
+/* Ensure links are always clearly identifiable */
+a {
+	color: #005a9c;
+	text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+	color: #003366;
+}
+
+/* Improve text contrast */
+body {
+	color: #333;
+	line-height: 1.5;
+}
+
+/* Make cards focusable and styled appropriately */
+.article-card,
+.event-card,
+.projet-card,
+.magazine-card {
+	position: relative;
+	background-color: #fff;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Add a visual indication when content is focused within a card */
+.article-card:has(.card-link:focus),
+.event-card:has(.card-link:focus),
+.projet-card:has(.card-link:focus),
+.magazine-card:has(.card-link:focus) {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Fallback for browsers that don't support :has() */
+.article-card .card-link:focus,
+.event-card .card-link:focus,
+.projet-card .card-link:focus,
+.magazine-card .card-link:focus {
+	outline: 3px solid #ffcc00;
+}
+
+/* Improved form controls accessibility */
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+/* High contrast mode */
+.high-contrast {
+	background-color: #000;
+	color: #fff;
+}
+
+.high-contrast a {
+	color: #ffcc00;
+}
+
+.high-contrast img {
+	filter: grayscale(100%) contrast(120%);
+}
+
+.high-contrast .article-card,
+.high-contrast .event-card,
+.high-contrast .projet-card,
+.high-contrast .magazine-card {
+	background-color: #222;
+	border: 1px solid #fff;
+}
+
+/* Accessibility panel styles */
+#accessibility-panel {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	padding: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	border-radius: 8px;
+	max-width: 90%;
+	width: 400px;
+}
+
+.high-contrast #accessibility-panel {
+	background: #222;
+	border: 2px solid #fff;
+}
+
+#accessibility-panel .close-panel {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background: transparent;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	padding: 5px 10px;
+}
+
+.a11y-panel-content h2 {
+	margin-top: 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.a11y-section {
+	margin-bottom: 20px;
+}
+
+.a11y-controls {
+	display: flex;
+	gap: 10px;
+}
+
+.a11y-controls button {
+	background: #eee;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 8px 12px;
+	cursor: pointer;
+}
+
+.high-contrast .a11y-controls button {
+	background: #333;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.a11y-controls button:hover,
+.a11y-controls button:focus {
+	background: #ddd;
+}
+
+.high-contrast .a11y-controls button:hover,
+.high-contrast .a11y-controls button:focus {
+	background: #444;
+}
