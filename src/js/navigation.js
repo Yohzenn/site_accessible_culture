@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		// Set appropriate ARIA attributes
 		const expanded = navMenu.classList.contains("active");
 		menuToggle.setAttribute("aria-expanded", expanded);
+		navMenu.setAttribute("aria-hidden", !expanded);
 
 		// Prevent background scrolling when menu is open
 		if (expanded) {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		navMenu.classList.remove("active");
 		navOverlay.classList.remove("active");
 		menuToggle.setAttribute("aria-expanded", "false");
+		navMenu.setAttribute("aria-hidden", "true");
 		body.style.overflow = "";
 	}
 

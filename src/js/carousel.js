@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	const nextButton = document.querySelector(".next");
 	let currentSlide = 0;
 
+	carousel.setAttribute("role", "region");
+	carousel.setAttribute("aria-label", "Image Carousel");
+
+	prevButton.setAttribute("aria-label", "Previous Slide");
+	nextButton.setAttribute("aria-label", "Next Slide");
+
 	function updateSlides(newIndex) {
 		slides.forEach((slide, index) => {
 			slide.setAttribute("aria-hidden", index !== newIndex);

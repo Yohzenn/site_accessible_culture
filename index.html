@@ -32,8 +32,8 @@
             </button>
         </nav>
     </header>
-    <main id="main-content">
-        <section class="carousel" aria-labelledby="carousel-heading">
+    <main id="main-content" aria-live="polite">
+        <section class="carousel" aria-labelledby="carousel-heading" aria-live="polite">
             <h2 id="carousel-heading" class="sr-only">Actualités principales</h2>
             <div class="carousel-container" role="region" aria-roledescription="carrousel">
                 <div class="carousel-slides" aria-live="polite">
@@ -93,124 +93,134 @@
             <a href="#" aria-label="Sport"><img src="./src/img/PictoClick_5.png" alt="" role="presentation"></a>
             <a href="#" aria-label="Environnement"><img src="./src/img/PictoClick_6.png" alt="" role="presentation"></a>
         </div>
-        <section class="actualites" aria-labelledby="actualites-titre">
+        <section class="actualites" aria-labelledby="actualites-titre" aria-live="polite">
             <h2 id="actualites-titre">Actualités</h2>
             <div class="articles">
-                <article class="article-card">
+                <article class="article-card" aria-labelledby="article-1-title" aria-describedby="article-1-desc">
                     <a href="#article-1" class="card-link">
                         <img src="https://www.ville-melun.fr/images/02-EVENTS/2025/2025-03-10_Inscriptions-Scolaires-et-Perisclolaires_SITE-Vignette.jpg"
                             alt="" aria-hidden="true">
                         <span class="tag">Culture</span>
-                        <h3>Festival de musique</h3>
-                        <p>Le festival annuel de musique revient cet été avec une programmation exceptionnelle.</p>
+                        <h3 id="article-1-title">Festival de musique</h3>
+                        <p id="article-1-desc">Le festival annuel de musique revient cet été avec une programmation
+                            exceptionnelle.</p>
                     </a>
                 </article>
-                <article class="article-card">
+                <article class="article-card" aria-labelledby="article-2-title" aria-describedby="article-2-desc">
                     <a href="#article-2" class="card-link">
                         <img src="https://www.ville-melun.fr/images/02-EVENTS/2025/2025-02-20_PROJET-MEMOIRE_Episode-3_Un-Nouvel-Habitat_SITE-VIGNETTE.jpg"
                             alt="" aria-hidden="true">
                         <span class="tag">Sport</span>
-                        <h3>Marathon de Melun</h3>
-                        <p>Participez au marathon qui traversera les plus beaux quartiers de la ville.</p>
+                        <h3 id="article-2-title">Marathon de Melun</h3>
+                        <p id="article-2-desc">Participez au marathon qui traversera les plus beaux quartiers de la
+                            ville.</p>
                     </a>
                 </article>
-                <article class="article-card">
+                <article class="article-card" aria-labelledby="article-3-title" aria-describedby="article-3-desc">
                     <a href="#article-3" class="card-link">
                         <img src="https://www.ville-melun.fr/images/02-EVENTS/03-Journee-Internationale-Droits-Femmes/2024-03-08_JIDF_SITE-2.jpg"
                             alt="" aria-hidden="true">
                         <span class="tag">Environnement</span>
-                        <h3>Nouveaux espaces verts</h3>
-                        <p>La ville inaugure trois nouveaux parcs pour améliorer le cadre de vie des habitants.</p>
+                        <h3 id="article-3-title">Nouveaux espaces verts</h3>
+                        <p id="article-3-desc">La ville inaugure trois nouveaux parcs pour améliorer le cadre de vie des
+                            habitants.</p>
                     </a>
                 </article>
-                <article class="article-card">
+                <article class="article-card" aria-labelledby="article-4-title" aria-describedby="article-4-desc">
                     <a href="#article-4" class="card-link">
                         <img src="https://www.ville-melun.fr/images/Retour_IFOP.png" alt="" aria-hidden="true">
                         <span class="tag">Education</span>
-                        <h3>Rentrée scolaire</h3>
-                        <p>Toutes les informations importantes pour préparer la rentrée scolaire 2024.</p>
+                        <h3 id="article-4-title">Rentrée scolaire</h3>
+                        <p id="article-4-desc">Toutes les informations importantes pour préparer la rentrée scolaire
+                            2024.</p>
                     </a>
                 </article>
             </div>
         </section>
-        <section class="agenda" aria-labelledby="agenda-titre">
+        <section class="agenda" aria-labelledby="agenda-titre" aria-live="polite">
             <h2 id="agenda-titre">Agenda</h2>
             <div class="events-grid">
-                <article class="event-card">
+                <article class="event-card" aria-labelledby="event-1-title" aria-describedby="event-1-desc">
                     <a href="#event-1" class="card-link">
                         <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_2024-budget-participatif-rubrique.jpg"
                             alt="" aria-hidden="true">
                         <time datetime="2024-03-15T20:00">15 Mars 2024 - 20h00</time>
-                        <h3>Concert de Jazz</h3>
-                        <address>Espace Saint-Jean</address>
+                        <h3 id="event-1-title">Concert de Jazz</h3>
+                        <address id="event-1-desc">Espace Saint-Jean</address>
                     </a>
                 </article>
-                <article class="event-card">
+                <article class="event-card" aria-labelledby="event-2-title" aria-describedby="event-2-desc">
                     <a href="#event-2" class="card-link">
                         <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_gabarit-vis-ma-vie-site.png"
                             alt="" aria-hidden="true">
                         <time datetime="2024-03-20T14:00">20 Mars 2024 - 14h00</time>
-                        <h3>Exposition d'Art Moderne</h3>
-                        <address>Musée d'Art</address>
+                        <h3 id="event-2-title">Exposition d'Art Moderne</h3>
+                        <address id="event-2-desc">Musée d'Art</address>
                     </a>
                 </article>
-                <article class="event-card" tabindex="0">
+                <article class="event-card" tabindex="0" aria-labelledby="event-3-title"
+                    aria-describedby="event-3-desc">
                     <a href="#event-3" class="card-link">
                         <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_permanence-des-elus-marche-gaillardon-site.jpg"
                             alt="Théâtre">
                         <time datetime="2024-03-25T19:30">25 Mars 2024 - 19h30</time>
-                        <h3>Pièce de Théâtre</h3>
-                        <address>Théâtre Municipal</address>
+                        <h3 id="event-3-title">Pièce de Théâtre</h3>
+                        <address id="event-3-desc">Théâtre Municipal</address>
                     </a>
                 </article>
-                <article class="event-card" tabindex="0">
+                <article class="event-card" tabindex="0" aria-labelledby="event-4-title"
+                    aria-describedby="event-4-desc">
                     <a href="#event-4" class="card-link">
                         <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_2023-10-17-cm-melun.jpg"
                             alt="Marché local">
                         <time datetime="2024-03-30T09:00">30 Mars 2024 - 9h00</time>
-                        <h3>Marché des Producteurs</h3>
-                        <address>Place Saint-Jean</address>
+                        <h3 id="event-4-title">Marché des Producteurs</h3>
+                        <address id="event-4-desc">Place Saint-Jean</address>
                     </a>
                 </article>
-                <article class="event-card" tabindex="0">
+                <article class="event-card" tabindex="0" aria-labelledby="event-5-title"
+                    aria-describedby="event-5-desc">
                     <a href="#event-5" class="card-link">
                         <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_salonenfance25.png"
                             alt="Festival de danse">
                         <time datetime="2024-04-05T18:00">5 Avril 2024 - 18h00</time>
-                        <h3>Festival de Danse</h3>
-                        <address>Gymnase Municipal</address>
+                        <h3 id="event-5-title">Festival de Danse</h3>
+                        <address id="event-5-desc">Gymnase Municipal</address>
                     </a>
                 </article>
-                <article class="event-card" tabindex="0">
+                <article class="event-card" tabindex="0" aria-labelledby="event-6-title"
+                    aria-describedby="event-6-desc">
                     <a href="#event-6" class="card-link">
                         <img src="https://www.ville-melun.fr/images/icagenda/thumbs/themes/ic_xsmall_w267h177q90c_permanence-des-elus-marche-montaigu-site.jpg"
                             alt="Conférence">
                         <time datetime="2024-04-10T15:00">10 Avril 2024 - 15h00</time>
-                        <h3>Conférence Histoire</h3>
-                        <address>Médiathèque</address>
+                        <h3 id="event-6-title">Conférence Histoire</h3>
+                        <address id="event-6-desc">Médiathèque</address>
                     </a>
                 </article>
-                <article class="event-card" tabindex="0">
+                <article class="event-card" tabindex="0" aria-labelledby="event-7-title"
+                    aria-describedby="event-7-desc">
                     <a href="#event-7" class="card-link">
                         <img src="https://www.seine-et-marne.fr/sites/default/files/media/images/chateau-blandy-2023.jpg"
                             alt="Concert classique">
                         <time datetime="2024-04-15T20:30">15 Avril 2024 - 20h30</time>
-                        <h3>Concert Classique</h3>
-                        <address>Conservatoire</address>
+                        <h3 id="event-7-title">Concert Classique</h3>
+                        <address id="event-7-desc">Conservatoire</address>
                     </a>
                 </article>
-                <article class="event-card" tabindex="0">
+                <article class="event-card" tabindex="0" aria-labelledby="event-8-title"
+                    aria-describedby="event-8-desc">
                     <a href="#event-8" class="card-link">
                         <img src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/74/241/23392586.jpg"
                             alt="Atelier cuisine">
                         <time datetime="2024-04-20T14:30">20 Avril 2024 - 14h30</time>
-                        <h3>Atelier Cuisine</h3>
-                        <address>Centre Culturel</address>
+                        <h3 id="event-8-title">Atelier Cuisine</h3>
+                        <address id="event-8-desc">Centre Culturel</address>
                     </a>
                 </article>
             </div>
         </section>
-        <section class="grand-projets" aria-labelledby="projets-titre">
+        <section class="grand-projets" aria-labelledby="projets-titre" aria-live="polite">
             <h2 id="projets-titre">Grands Projets</h2>
             <div class="projets-grid">
                 <article class="projet-card">
@@ -261,7 +271,7 @@
         </section>
 
         <!-- Publications Section -->
-        <section class="publications" aria-labelledby="publications-titre">
+        <section class="publications" aria-labelledby="publications-titre" aria-live="polite">
             <h2 id="publications-titre">Publications</h2>
             <div class="magazines-grid">
                 <article class="magazine-card">

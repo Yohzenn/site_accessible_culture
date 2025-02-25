@@ -46,6 +46,13 @@ nav {
 	padding: 0.5rem;
 }
 
+.menu-toggle:focus,
+.menu-toggle:hover {
+	outline: 3px solid #ffbf47;
+	outline-offset: 2px;
+	text-decoration: none;
+}
+
 nav ul {
 	display: flex;
 	justify-content: center;
@@ -1088,4 +1095,26 @@ magazine-card:focus-within {
 	top: 0;
 	left: 0;
 	z-index: 1001;
+}
+
+/* High contrast mode */
+.high-contrast {
+	background-color: #000;
+	color: #fff;
+}
+
+.high-contrast a {
+	color: #ffcc00;
+}
+
+.high-contrast img {
+	filter: grayscale(100%) contrast(120%);
+}
+
+.high-contrast .article-card,
+.high-contrast .event-card,
+.high-contrast .projet-card,
+.high-contrast .magazine-card {
+	background-color: #222;
+	border: 1px solid #fff;
 }
