@@ -68,6 +68,12 @@ nav a {
 	transition: all 0.3s;
 }
 
+.menu-toggle:focus,
+.menu-toggle:hover {
+	outline: 3px solid #ffbf47;
+	outline-offset: 2px;
+	text-decoration: none;
+}
 /* Improved focus styles with better contrast */
 nav ul li a:focus {
 	outline: 3px solid #ffbf47; /* High contrast yellow */
@@ -79,7 +85,6 @@ nav ul li a:focus {
 /* Hover effects */
 nav ul li a:hover {
 	color: white;
-
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -276,7 +281,7 @@ nav ul li a[aria-current="page"]:focus {
 	text-align: right;
 }
 
-.slide-content h1 {
+.slide-content h2 {
 	background: white;
 	color: black;
 	padding: clamp(0.5rem, 2vw, 1rem);

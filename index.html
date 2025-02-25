@@ -7,6 +7,7 @@
     <title>Ville de Melun - Page d'accueil</title>
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/accessibility.css">
+    <link rel="stylesheet" href="./src/css/footer.css">
 </head>
 
 <body>
@@ -26,6 +27,9 @@
                 <li><a href="#publications-titre">Publications</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">
+                <span>☰</span>
+            </button>
         </nav>
     </header>
     <main id="main-content">
@@ -333,32 +337,42 @@
         </section>
     </main>
 
-    <footer id="footer" role="contentinfo">
+    <footer id="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h2>Ville de Melun</h2>
-                <address>
-                    Hôtel de Ville<br>
-                    16 Rue Paul Doumer<br>
-                    77000 Melun<br>
-                    <a href="tel:+33164525000">01 64 52 50 00</a>
-                </address>
-            </div>
-            <div class="footer-section">
-                <h2>Liens rapides</h2>
-                <ul>
-                    <li><a href="#" id="accessibility-link">Accessibilité</a></li>
-                    <li><a href="#">Mentions légales</a></li>
-                    <li><a href="#">Plan du site</a></li>
-                    <li><a href="#">Politique de confidentialité</a></li>
-                </ul>
+            <img class="footer-logo" src="./src/img/logo_footer.png" alt="">
+            <p>SUIVEZ NOUS</p>
+        </div>
+
+        <div class="footer-text">
+            <h1>HÔTEL DE VILLE</h1>
+            <p>16, rue Paul Doumer - 77011 MELUN Cedex</p>
+            <li class="link"><a class="recrutement" href="https://www.ville-melun.fr/la-ville/ressources-humaines">NOUS
+                    RECRUTONS</a></li>
+            <strong>MAIRIE+</strong>
+            <p>Pour toutes vos démarches administratives</p>
+            <p>2, Passage Lebarbier - 77000 Melun</p>
+        </div>
+
+        <div class="footer-contact">
+            <h1>CONTACTS</h1>
+            <p>Email : villemelun@gmail.com</p>
+            <p>Telephone : 01 64 52 33 03</p>
+            <div class="social">
+                <img src="./src/img/rs-fb_footer.png" alt="">
+                <img src="./src/img/rs-insta_footer.png" alt="">
+                <img src="./src/img/rs-youtube_footer.png" alt="">
+                <img src="./src/img/rs-x_footer.png" alt="">
             </div>
         </div>
-    </footer>
 
+
+
+
+    </footer>
     <script src="./src/js/carousel.js"></script>
     <script src="./src/js/focus-manager.js"></script>
     <script src="./src/js/accessibility.js"></script>
+    <script src="/src/js/navigation.js"></script>
 </body>
 
 </html>
