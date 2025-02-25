@@ -1,63 +1,88 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 header {
-    background-color: #10162f;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 7rem;
+	background-color: #10162f;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 7rem;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    list-style-type: none;
-    
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	list-style-type: none;
 }
-
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
 }
 nav ul li {
-    font-size: 1.2rem;
-    list-style-type: none;
-    position: relative;
+	font-size: 1.2rem;
+	list-style-type: none;
+	position: relative;
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
-    position: relative;
+	text-decoration: none;
+	color: #fff;
+	position: relative;
 }
 
 nav ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: -6px; /* Position sous le texte */
-  left: 100%; /* Départ à droite */
-  width: 0%;
-  height: 3px;
-  background-color: white; /* Couleur de la barre */
-  transition: all 0.3s ease-in-out;
+	content: "";
+	position: absolute;
+	bottom: -6px; /* Position sous le texte */
+	left: 100%; /* Départ à droite */
+	width: 0%;
+	height: 3px;
+	background-color: white; /* Couleur de la barre */
+	transition: all 0.3s ease-in-out;
 }
-
 
 nav ul li a:hover::after {
-  left: 0%; /* Fait partir de la droite vers la gauche */
-  width: 100%; /* Barre complète */
+	left: 0%; /* Fait partir de la droite vers la gauche */
+	width: 100%; /* Barre complète */
 }
 
+.hero {
+	background-image: url("https://www.ville-melun.fr/images/02-EVENTS/03-Journee-Internationale-Droits-Femmes/2024-03-08_JIDF_SITE-2.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	color: white;
+	text-align: right;
+	padding: 12rem;
+}
+
+.hero h1 {
+	background: white none repeat scroll 0% 0%;
+	color: black;
+	padding: 1%;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.hero p {
+	padding: 1%;
+	background: rgba(0, 0, 0, 0.4) none repeat scroll 0% 0%;
+	font-size: 1.2rem;
+	max-width: 800px;
+}
