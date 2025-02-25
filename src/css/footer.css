@@ -1,0 +1,78 @@
+footer {
+  background-color: #102444;
+  color: #fff;
+  display: flex;
+
+  justify-content: space-around;
+  height: 20rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem; /* Ajoute un espacement uniforme entre les éléments */
+}
+
+.footer-text h1,
+.footer-text p,
+.footer-text strong {
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0;
+}
+
+.footer-text .link {
+  padding-bottom: 0.5rem; /* Réduit l'espacement du lien */
+}
+
+.footer-logo {
+  gap: 0.5rem;
+}
+
+.social {
+  width: auto;
+  height: auto;
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.recrutement {
+  text-decoration: none;
+  color: #fff;
+  background-color: red;
+  padding: 1%;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.horaires {
+  text-decoration: none;
+  color: #fff;
+  background-color: red;
+  padding: 1%;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+  padding-bottom: 3%;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+}
