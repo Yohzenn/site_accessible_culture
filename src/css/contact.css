@@ -84,7 +84,6 @@ h1{
     width: 60%;
     margin-left: 10%;
     margin-top: 5rem;
-    justify-self: center;
   }
 
   .infos_box{
@@ -152,6 +151,10 @@ h1{
 
       .infos_box, .infos_p {
         margin-left: 0;
+      }
+
+      .infos_container {
+        justify-self: center;
       }
 
     }
