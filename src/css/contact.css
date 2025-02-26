@@ -84,7 +84,7 @@ h1{
     width: 60%;
     margin-left: 10%;
     margin-top: 5rem;
-
+    justify-self: center;
   }
 
   .infos_box{
@@ -130,4 +130,28 @@ h1{
         height: 1px;
         background-color: #adacac;
         margin-top: 2rem;
+    }
+
+  
+    @media screen and (max-width: 1500px) {
+        main {
+            flex-direction: column;
+            height: 100%; 
+        }
+        .aside {
+            width: 100%;;
+        }
+        .background-image {
+            display: none;
+        }
+      form {
+        position: static;
+        align-self: center;
+        margin-bottom: 5rem;
+      }
+
+      .infos_box, .infos_p {
+        margin-left: 0;
+      }
+
     }

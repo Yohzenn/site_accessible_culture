@@ -1,42 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer</title>
+    <title>Footer - Ville de Melun</title>
     <link rel="stylesheet" href="./src/css/footer.css">
 </head>
 <body>
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
-            <img class="footer-logo" src="./src/img/logo_footer.png" alt="">
+            <img class="footer-logo" src="./src/img/logo_footer.png" alt="Logo de la ville de Melun">
+            <h2>Réseaux sociaux</h2>
             <p>SUIVEZ NOUS</p>
         </div>
         
         <div class="footer-text">
-        <h1>HÔTEL DE VILLE</h1>
-        <p>16, rue Paul Doumer - 77011 MELUN Cedex</p>
-        <li class="link"><a class="recrutement" href="https://www.ville-melun.fr/la-ville/ressources-humaines">NOUS RECRUTONS</a></li>
-        <strong>MAIRIE+</strong>
-        <p>Pour toutes vos démarches administratives</p>
-        <p>2, Passage Lebarbier - 77000 Melun</p>
+            <h2>HÔTEL DE VILLE</h2>
+            <address>
+                <p>16, rue Paul Doumer - 77011 MELUN Cedex</p>
+            </address>
+            <nav aria-label="Liens utiles">
+                <ul>
+                    <li class="link"><a class="recrutement" href="https://www.ville-melun.fr/la-ville/ressources-humaines">Consulter nos offres d'emploi</a></li>
+                </ul>
+            </nav>
+            <h3>MAIRIE+</h3>
+            <p>Pour toutes vos démarches administratives</p>
+            <address>
+                <p>2, Passage Lebarbier - 77000 Melun</p>
+            </address>
         </div>
 
         <div class="footer-contact">
-            <h1>CONTACTS</h1>
-            <p>Email : villemelun@gmail.com</p>
-            <p>Telephone : 01 64 52 33 03</p>
-            <div class="social">
-                <img src="./src/img/rs-fb_footer.png" alt="">
-                <img src="./src/img/rs-insta_footer.png" alt="">
-                <img  src="./src/img/rs-youtube_footer.png" alt="">
-                <img src="./src/img/rs-x_footer.png" alt="">
-            </div>
+            <h2>CONTACTS</h2>
+            <address>
+                <p>Email : <a href="mailto:villemelun@gmail.com">villemelun@gmail.com</a></p>
+                <p>Téléphone : <a href="tel:+33164523303">01 64 52 33 03</a></p>
+            </address>
+            <nav class="social" aria-label="Réseaux sociaux">
+                <a href="#" aria-label="Suivez-nous sur Facebook">
+                    <img src="./src/img/rs-fb_footer.png" alt="">
+                </a>
+                <a href="#" aria-label="Suivez-nous sur Instagram">
+                    <img src="./src/img/rs-insta_footer.png" alt="">
+                </a>
+                <a href="#" aria-label="Suivez-nous sur YouTube">
+                    <img src="./src/img/rs-youtube_footer.png" alt="">
+                </a>
+                <a href="#" aria-label="Suivez-nous sur X (anciennement Twitter)">
+                    <img src="./src/img/rs-x_footer.png" alt="">
+                </a>
+            </nav>
         </div>
-
-
-
-
     </footer>
 </body>
 </html>
