@@ -9,14 +9,26 @@
     <link rel="stylesheet" href="./src/css/footer.css">
   </head>
   <body>
+   <!-- Improved skip links -->
+    <div class="skip-links">
+        <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+        <a href="#footer" class="skip-link">Aller au pied de page</a>
+    </div>
     <header>
-      <nav>
-        <img src="./src/img/ville_de_melun.png" alt="" width="200px" />
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <nav aria-label="Navigation principale">
+            <img src="./src/img/ville_de_melun.png" alt="Logo Ville de Melun" width="200">
+            <ul>
+                <li><a href="index.html" >Accueil</a></li>
+                <li><a href="index.html#actualites-titre">Actualités</a></li>
+                <li><a href="index.html#agenda-titre">Agenda</a></li>
+                <li><a href="index.html#projets-titre">Grands Projets</a></li>
+                <li><a href="index.html#publications-titre">Publications</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">
+                <span>☰</span>
+            </button>
+        </nav>
     </header>
     <main>
       <div class="aside">

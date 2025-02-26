@@ -93,6 +93,7 @@ nav ul li a:focus {
 nav ul li a:hover {
 	color: white;
 	background-color: rgba(255, 255, 255, 0.2);
+	text-decoration: none;
 }
 
 nav ul li a::after {
@@ -102,7 +103,7 @@ nav ul li a::after {
 	left: 100%;
 	width: 0%;
 	height: 3px;
-	background-color: #ffbf47; /* Changed to match focus color */
+	background-color: #fff; /* Changed to match focus color */
 	transition: all 0.3s ease-in-out;
 }
 
