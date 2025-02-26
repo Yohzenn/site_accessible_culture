@@ -89,7 +89,7 @@ nav ul li a:focus {
 	color: white;
 }
 
-/* Hover effects */
+/* Hover effects - modified to remove outline */
 nav ul li a:hover {
 	color: white;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -333,9 +333,14 @@ nav ul li a[aria-current="page"]:focus {
 	transition: all 0.3s ease;
 }
 
-.carousel-controls button:hover,
+/* Carousel/Hero Navigation Enhancements - modified to remove outline on hover */
+.carousel-controls button:hover {
+	background: #1a73e8; /* Blue background on hover */
+}
+
 .carousel-controls button:focus {
-	background: rgba(255, 255, 255, 0.3);
+	background: #1a73e8; /* Blue background on focus */
+	outline: 3px solid #ffbf47; /* High visibility outline */
 }
 
 .carousel-controls button:focus-visible {
@@ -552,7 +557,7 @@ nav ul li a[aria-current="page"]:focus {
 
 /* Improved focus styles */
 :focus {
-	outline: 3px solid #ffbf47; /* High contrast yellow instead of blue */
+	outline: 3px solid #ffbf47; /* High contrast yellow */
 	outline-offset: 3px;
 }
 
@@ -608,16 +613,20 @@ nav a:focus-visible {
 	margin: 0 auto;
 }
 
+/* Event card styles - add default transparent border */
 .event-card {
 	background: white;
 	border-radius: 8px;
 	overflow: hidden;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
+	transition: transform 0.3s ease, border-color 0.3s ease;
+	border: 2px solid transparent; /* Add default transparent border */
+	box-sizing: border-box; /* Ensure border is included in element dimensions */
 }
 
 .event-card:hover {
 	transform: translateY(-5px);
+	border-color: #2563eb; /* Only change border color, not width */
 }
 
 .event-card img {
@@ -1006,7 +1015,7 @@ html {
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Style cards consistently */
+/* Style cards consistently - modified to remove outline on hover */
 .article-card:focus,
 .event-card:focus,
 .projet-card:focus,
@@ -1059,14 +1068,25 @@ magazine-card:focus-within {
 	height: 100%;
 	color: inherit;
 	text-decoration: none;
+	/* Remove transform and box-shadow transitions from card links */
+	transition: none;
 }
 
+/* Remove hover effects from elements inside cards */
+.card-link:hover {
+	/* Remove transform and box-shadow effects */
+	transform: none;
+	box-shadow: none;
+}
+
+/* Make sure card containers still have hover effects but not their children */
 .article-card:hover,
 .event-card:hover,
 .projet-card:hover,
 .magazine-card:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	border: 2px solid #2563eb; /* Added blue outline on hover */
 }
 
 /* Make sure images in cards aren't distorted with the new link structure */

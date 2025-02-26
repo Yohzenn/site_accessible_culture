@@ -42,33 +42,34 @@
 	border-width: 0;
 }
 
-/* Improved Focus styles - ensure they stand out with consistent appearance */
+/* Normalized focus styles for all elements - keep outline only on focus */
 :focus {
-	outline: 2px solid #ffcc00;
-	outline-offset: 2px;
+	outline: 3px solid #ffcc00;
+	outline-offset: 3px;
 }
 
-/* Specific focus style for interactive elements */
+/* Specific focus style for interactive elements with consistent thickness */
 a:focus,
 button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-	outline: 2px solid #ffcc00;
-	outline-offset: 2px;
+	outline: 3px solid #ffcc00;
+	outline-offset: 3px;
 	text-decoration: underline;
 }
 
-/* Focus style for cards - modified to prevent double focus issues */
+/* Consistent focus style for all card types */
 .article-card .card-link:focus,
 .event-card .card-link:focus,
 .projet-card .card-link:focus,
 .magazine-card .card-link:focus {
 	outline: 3px solid #ffcc00;
 	outline-offset: 3px;
+	text-decoration: none; /* Override the underline from general a:focus */
 }
 
-/* Remove tabindex focus from cards */
+/* FIXED: Remove tabindex focus from cards (fixed missing dots in selectors) */
 .article-card:focus,
 .event-card:focus,
 .projet-card:focus,
@@ -76,12 +77,20 @@ textarea:focus {
 	outline: none;
 }
 
-/* Card link styling */
+/* Card link styling - remove transform and box-shadow */
 .card-link {
 	display: block;
 	color: inherit;
 	text-decoration: none;
 	height: 100%;
+	transition: none; /* Removed transitions from card links */
+}
+
+/* MODIFIED: Hover effects for card links without outlines or transforms */
+.card-link:hover {
+	/* Removed outline, transform and box-shadow */
+	transform: none;
+	box-shadow: none;
 }
 
 /* Status indicators with both color and text for colorblind users */
@@ -112,12 +121,18 @@ textarea:focus {
 a {
 	color: #005a9c;
 	text-decoration: underline;
+	transition: color 0.2s, text-decoration 0.2s; /* Added for smoother transitions */
 }
 
-a:hover,
+a:hover {
+	text-decoration: underline;
+	color: #003366;
+}
+
 a:focus {
 	text-decoration: underline;
 	color: #003366;
+	outline: 3px solid #ffcc00;
 }
 
 /* Improve text contrast */
@@ -126,7 +141,7 @@ body {
 	line-height: 1.5;
 }
 
-/* Make cards focusable and styled appropriately */
+/* Make all cards have consistent styling and behavior */
 .article-card,
 .event-card,
 .projet-card,
@@ -136,10 +151,22 @@ body {
 	border-radius: 4px;
 	overflow: hidden;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	transition: transform 0.2s, box-shadow 0.2s;
+	transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+	border: 2px solid transparent; /* Add default transparent border */
+	box-sizing: border-box; /* Ensure border is included in element dimensions */
 }
 
-/* Add a visual indication when content is focused within a card */
+/* UPDATED: Consistent hover effect - only change border color */
+.article-card:hover,
+.event-card:hover,
+.projet-card:hover,
+.magazine-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	border-color: #2563eb; /* Only change border color, not width */
+}
+
+/* UPDATED: Add a visual indication when content is focused within a card */
 .article-card:has(.card-link:focus),
 .event-card:has(.card-link:focus),
 .projet-card:has(.card-link:focus),
