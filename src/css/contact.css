@@ -67,7 +67,7 @@ form {
 main {
     position: relative;
     display: flex;
-    height: 95vh;
+    height: 61.5rem;
     z-index: 1;
 }
 .aside {
@@ -108,7 +108,7 @@ h1{
 
 
     .socials {
-        margin-top: 3rem;
+        margin-block: 3rem;
     }
     .socials img  {
         margin-top: 2rem;
