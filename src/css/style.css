@@ -443,18 +443,59 @@ nav ul li a[aria-current="page"]:focus {
 	background-color: #f5f5f5;
 }
 
-.pictograms img {
-	width: 100%;
-	max-width: 150px;
+.pictogram-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	color: #10162f;
+	font-weight: 500;
 	transition: transform 0.3s ease;
 }
 
-.pictograms a {
-	text-align: center;
+.pictogram-item:hover {
+	transform: translateY(-5px);
 }
 
-.pictograms a:hover img {
-	transform: scale(1.1);
+.pictogram-item:focus {
+	outline: 3px solid #ffbf47;
+	outline-offset: 4px;
+	transform: translateY(-5px);
+}
+
+.pictograms img {
+	width: 100%;
+	max-width: 150px;
+	margin-bottom: 1rem;
+	transition: transform 0.3s ease;
+}
+
+.pictogram-text {
+	text-align: center;
+	font-size: 1.3rem;
+	margin-top: 0.5rem;
+}
+
+/* Responsive adjustments for pictograms */
+@media (max-width: 1200px) {
+	.pictograms {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 3rem 4rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.pictograms {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.pictograms {
+		grid-template-columns: repeat(1, 1fr);
+		padding: 2rem 1rem;
+	}
 }
 
 .actualites {

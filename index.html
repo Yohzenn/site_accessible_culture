@@ -8,9 +8,26 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/accessibility.css">
     <link rel="stylesheet" href="./src/css/footer.css">
+    <link rel="stylesheet" href="./src/css/cookies.css">
 </head>
 
 <body>
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-consent" class="cookie-consent" role="dialog" aria-labelledby="cookie-title"
+        aria-describedby="cookie-description" tabindex="-1">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h2 id="cookie-title">Gestion des cookies</h2>
+                <p id="cookie-description">Nous utilisons des cookies pour améliorer votre expérience sur notre site.
+                    Vous pouvez accepter tous les cookies ou personnaliser vos préférences.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn btn-accept">Accepter</button>
+                <button id="cookie-refuse" class="btn btn-refuse">Refuser</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Improved skip links -->
     <div class="skip-links">
         <a href="#main-content" class="skip-link">Aller au contenu principal</a>
@@ -84,14 +101,30 @@
             </div>
         </section>
         <div class="pictograms" role="navigation" aria-label="Accès rapide">
-            <a href="#" aria-label="Services municipaux"><img src="./src/img/PictoClick_1.png" alt=""
-                    role="presentation"></a>
-            <a href="#" aria-label="Culture et loisirs"><img src="./src/img/PictoClick_2.png" alt=""
-                    role="presentation"></a>
-            <a href="#" aria-label="Education"><img src="./src/img/PictoClick_3.png" alt="" role="presentation"></a>
-            <a href="#" aria-label="Urbanisme"><img src="./src/img/PictoClick_4.png" alt="" role="presentation"></a>
-            <a href="#" aria-label="Sport"><img src="./src/img/PictoClick_5.png" alt="" role="presentation"></a>
-            <a href="#" aria-label="Environnement"><img src="./src/img/PictoClick_6.png" alt="" role="presentation"></a>
+            <a href="#" class="pictogram-item">
+                <img src="./src/img/PictoClick_1.png" alt="" role="presentation">
+                <span class="pictogram-text">Services municipaux</span>
+            </a>
+            <a href="#" class="pictogram-item">
+                <img src="./src/img/PictoClick_2.png" alt="" role="presentation">
+                <span class="pictogram-text">Culture et loisirs</span>
+            </a>
+            <a href="#" class="pictogram-item">
+                <img src="./src/img/PictoClick_3.png" alt="" role="presentation">
+                <span class="pictogram-text">Education</span>
+            </a>
+            <a href="#" class="pictogram-item">
+                <img src="./src/img/PictoClick_4.png" alt="" role="presentation">
+                <span class="pictogram-text">Urbanisme</span>
+            </a>
+            <a href="#" class="pictogram-item">
+                <img src="./src/img/PictoClick_5.png" alt="" role="presentation">
+                <span class="pictogram-text">Sport</span>
+            </a>
+            <a href="#" class="pictogram-item">
+                <img src="./src/img/PictoClick_6.png" alt="" role="presentation">
+                <span class="pictogram-text">Environnement</span>
+            </a>
         </div>
         <section class="actualites" aria-labelledby="actualites-titre" aria-live="polite">
             <h2 id="actualites-titre">Actualités</h2>
@@ -383,6 +416,7 @@
     <script src="./src/js/focus-manager.js"></script>
     <script src="./src/js/accessibility.js"></script>
     <script src="/src/js/navigation.js"></script>
+    <script src="./src/js/cookies.js"></script>
 </body>
 
 </html>
