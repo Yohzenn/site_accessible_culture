@@ -42,6 +42,10 @@
 	border-width: 0;
 }
 
+.pictogram-item:focus {
+	outline: 3px solid #ffcc00;
+	outline-offset: 3px;
+}
 /* Normalized focus styles for all elements - keep outline only on focus */
 :focus {
 	outline: 3px solid #ffcc00;
@@ -133,12 +137,6 @@ a:focus {
 	text-decoration: underline;
 	color: #003366;
 	outline: 3px solid #ffcc00;
-}
-
-/* Improve text contrast */
-body {
-	color: #333;
-	line-height: 1.5;
 }
 
 /* Make all cards have consistent styling and behavior */

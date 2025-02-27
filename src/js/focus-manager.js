@@ -1,10 +1,32 @@
-// Function to scroll element into view when focused
+// Function to scroll element into view when focused via keyboard only
 function handleFocusScroll(element) {
+	// Track whether the focus came from keyboard navigation
+	let usingKeyboard = false;
+
+	// Listen for keydown events to detect keyboard navigation
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Tab") {
+			usingKeyboard = true;
+			// Reset after a short delay to avoid false positives
+			setTimeout(() => {
+				usingKeyboard = false;
+			}, 100);
+		}
+	});
+
+	// Listen for mousedown to detect mouse interaction
+	document.addEventListener("mousedown", () => {
+		usingKeyboard = false;
+	});
+
 	element.addEventListener("focus", () => {
-		element.scrollIntoView({
-			behavior: "smooth",
-			block: "center",
-		});
+		// Only scroll if the focus came from keyboard navigation
+		if (usingKeyboard) {
+			element.scrollIntoView({
+				behavior: "smooth",
+				block: "center",
+			});
+		}
 	});
 }
 
