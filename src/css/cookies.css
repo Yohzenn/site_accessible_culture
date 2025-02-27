@@ -89,8 +89,9 @@
 }
 
 .btn:focus {
-	outline: 2px solid white;
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 2px;
+	/* No hover styles when focused */
 }
 
 @media (max-width: 768px) {

@@ -6,6 +6,7 @@
 
 body {
 	font-family: "Roboto", sans-serif;
+	line-height: 1.5rem;
 }
 
 /* Improved Navbar with Better Responsive Design */
@@ -83,10 +84,12 @@ nav a {
 }
 /* Improved focus styles with better contrast */
 nav ul li a:focus {
-	outline: 3px solid #ffbf47; /* High contrast yellow */
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	background-color: rgba(255, 255, 255, 0.2);
 	text-decoration: underline;
 	color: white;
+	/* Remove any hover styles when focused */
+	box-shadow: none;
 }
 
 /* Hover effects - modified to remove outline */
@@ -94,6 +97,7 @@ nav ul li a:hover {
 	color: white;
 	background-color: rgba(255, 255, 255, 0.2);
 	text-decoration: none;
+	border-color: #2563eb; /* Blue border color on hover */
 }
 
 nav ul li a::after {
@@ -337,11 +341,13 @@ nav ul li a[aria-current="page"]:focus {
 /* Carousel/Hero Navigation Enhancements - modified to remove outline on hover */
 .carousel-controls button:hover {
 	background: #1a73e8; /* Blue background on hover */
+	/* No outline on hover */
 }
 
 .carousel-controls button:focus {
 	background: #1a73e8; /* Blue background on focus */
-	outline: 3px solid #ffbf47; /* High visibility outline */
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
+	/* No hover effects when focused */
 }
 
 .carousel-controls button:focus-visible {
@@ -381,10 +387,16 @@ nav ul li a[aria-current="page"]:focus {
 	cursor: pointer;
 }
 
-.carousel-controls button:hover,
+.carousel-controls button:hover {
+	background: #1a73e8; /* Blue background on hover */
+	/* No outline on hover */
+}
+
 .carousel-controls button:focus {
-	background: #1a73e8; /* Blue background on hover/focus */
-	outline: 3px solid #ffbf47; /* High visibility outline */
+	background: #1a73e8; /* Blue background */
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
+	outline-offset: 2px;
+	/* No hover effects when focused */
 }
 
 .carousel-dots button {
@@ -399,6 +411,11 @@ nav ul li a[aria-current="page"]:focus {
 .carousel-dots button[aria-selected="true"] {
 	background: white;
 	box-shadow: 0 0 0 2px #0056b3; /* Blue outline for selected dot */
+}
+
+.carousel-dots button:focus {
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
+	outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
@@ -458,9 +475,10 @@ nav ul li a[aria-current="page"]:focus {
 }
 
 .pictogram-item:focus {
-	outline: 3px solid #ffbf47;
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 4px;
 	transform: translateY(-5px);
+	/* No hover outline when focused */
 }
 
 .pictograms img {
@@ -599,8 +617,8 @@ nav ul li a[aria-current="page"]:focus {
 
 /* Improved focus styles */
 :focus {
-	outline: 3px solid #ffbf47; /* High contrast yellow */
-	outline-offset: 3px;
+	outline: 3px solid #ffcc00; /* Consistent yellow color */
+	outline-offset: 2px;
 }
 
 :focus:not(:focus-visible) {
@@ -775,7 +793,7 @@ nav a:focus-visible {
 
 /* Focus styles */
 :focus {
-	outline: 2px solid #0066cc;
+	outline: 3px solid #ffcc00; /* Consistent yellow color */
 	outline-offset: 2px;
 }
 
@@ -790,8 +808,8 @@ nav a:focus-visible {
 
 .carousel button:focus,
 .pictograms a:focus,
-event-card:focus {
-	outline: 2px solid #0066cc;
+.event-card:focus {
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 4px;
 	box-shadow: 0 0 8px rgba(0, 102, 204, 0.5);
 }
@@ -1077,8 +1095,9 @@ html {
 .event-card:focus,
 .projet-card:focus,
 .magazine-card:focus {
-	outline: 3px solid #1a73e8;
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 2px;
+	/* No hover effects when focused */
 }
 
 /* Style cards when their children have focus */
