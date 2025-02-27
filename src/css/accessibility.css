@@ -24,7 +24,7 @@
 
 .skip-link:focus {
 	top: 0;
-	outline: 3px solid #ffbf47; /* High visibility focus outline */
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 2px;
 	border-color: #000;
 }
@@ -42,13 +42,20 @@
 	border-width: 0;
 }
 
-.pictogram-item:focus {
-	outline: 3px solid #ffcc00;
+/* Normalized focus styles for ALL interactive elements */
+:focus {
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 3px;
 }
-/* Normalized focus styles for all elements - keep outline only on focus */
-:focus {
-	outline: 3px solid #ffcc00;
+
+/* Remove any hover effects when elements are focused */
+:focus:hover {
+	outline: 3px solid #ffcc00; /* Keep the yellow outline on focus+hover */
+}
+
+/* Pictogram specific focus styles */
+.pictogram-item:focus {
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 3px;
 }
 
@@ -58,9 +65,16 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-	outline: 3px solid #ffcc00;
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 3px;
 	text-decoration: underline;
+}
+
+/* Carousel controls focus */
+.carousel-controls button:focus {
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
+	outline-offset: 3px;
+	/* No hover styles when focused */
 }
 
 /* Consistent focus style for all card types */
@@ -68,7 +82,7 @@ textarea:focus {
 .event-card .card-link:focus,
 .projet-card .card-link:focus,
 .magazine-card .card-link:focus {
-	outline: 3px solid #ffcc00;
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 	outline-offset: 3px;
 	text-decoration: none; /* Override the underline from general a:focus */
 }
@@ -95,6 +109,13 @@ textarea:focus {
 	/* Removed outline, transform and box-shadow */
 	transform: none;
 	box-shadow: none;
+}
+
+/* Blue hover styling for interactive elements */
+a:hover,
+button:hover {
+	color: #2563eb; /* Blue color on hover */
+	/* No outline on hover */
 }
 
 /* Status indicators with both color and text for colorblind users */
@@ -130,13 +151,15 @@ a {
 
 a:hover {
 	text-decoration: underline;
-	color: #003366;
+	color: #2563eb; /* Consistent blue hover color */
+	outline: none; /* No outline on hover */
 }
 
 a:focus {
 	text-decoration: underline;
 	color: #003366;
-	outline: 3px solid #ffcc00;
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
+	/* No hover styles when focused */
 }
 
 /* Make all cards have consistent styling and behavior */
@@ -161,7 +184,8 @@ a:focus {
 .magazine-card:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-	border-color: #2563eb; /* Only change border color, not width */
+	border-color: #2563eb; /* Blue border color on hover */
+	/* No outline on hover */
 }
 
 /* UPDATED: Add a visual indication when content is focused within a card */
@@ -171,6 +195,7 @@ a:focus {
 .magazine-card:has(.card-link:focus) {
 	transform: translateY(-5px);
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	border-color: #ffcc00; /* Yellow border for focus state */
 }
 
 /* Fallback for browsers that don't support :has() */
@@ -178,7 +203,7 @@ a:focus {
 .event-card .card-link:focus,
 .projet-card .card-link:focus,
 .magazine-card .card-link:focus {
-	outline: 3px solid #ffcc00;
+	outline: 3px solid #ffcc00; /* Consistent yellow outline */
 }
 
 /* Improved form controls accessibility */
