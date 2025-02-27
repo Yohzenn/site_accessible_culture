@@ -4,13 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	const dots = Array.from(document.querySelectorAll(".carousel-dots button"));
 	const prevButton = document.querySelector(".prev");
 	const nextButton = document.querySelector(".next");
+	const liveRegion = document.getElementById("carousel-live-region");
 	let currentSlide = 0;
 
 	carousel.setAttribute("role", "region");
-	carousel.setAttribute("aria-label", "Image Carousel");
+	carousel.setAttribute("aria-label", "Carrousel de présentation");
 
-	prevButton.setAttribute("aria-label", "Previous Slide");
-	nextButton.setAttribute("aria-label", "Next Slide");
+	prevButton.setAttribute("aria-label", "Slide Précedente");
+	nextButton.setAttribute("aria-label", "Slide Suivante");
 
 	function updateSlides(newIndex) {
 		slides.forEach((slide, index) => {
@@ -27,6 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 
 		currentSlide = newIndex;
+		updateLiveRegion();
+	}
+
+	function updateLiveRegion() {
+		const currentSlideElement = slides[currentSlide];
+		const heading = currentSlideElement.querySelector("h2").textContent;
+		const description = currentSlideElement.querySelector("p").textContent;
+		liveRegion.textContent = `Slide ${currentSlide + 1} of ${
+			slides.length
+		} displayed: ${heading} - ${description}`;
 	}
 
 	// Initialize first slide

@@ -82,6 +82,70 @@ footer h1 {
 	justify-content: flex-start;
 }
 
+/* Enhanced Back to top button styles */
+.back-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #10162f;
+	color: white;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: 2px solid white;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+	z-index: 99;
+	/* Make sure button is focusable */
+	outline: none;
+}
+
+/* Show focus state clearly when reached via tabbing */
+.back-to-top:focus {
+	outline: 3px solid #ffcc00;
+	outline-offset: 3px;
+	/* Ensure it's visible when focused even if not scrolled */
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+.back-to-top.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+.back-to-top:hover {
+	background-color: #1a73e8;
+}
+
+.back-to-top .arrow {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* High contrast mode */
+.high-contrast .back-to-top {
+	background-color: black;
+	color: yellow;
+	border: 2px solid yellow;
+}
+
+/* Adjust position on mobile */
+@media (max-width: 768px) {
+	.back-to-top {
+		bottom: 10px;
+		right: 10px;
+		width: 40px;
+		height: 40px;
+	}
+}
+
 @media screen and (max-width: 1000px) {
 	footer {
 		flex-direction: column;
@@ -109,5 +173,4 @@ footer h1 {
 	.footer-contact {
 		align-items: center;
 	}
-	
 }

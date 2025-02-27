@@ -36,7 +36,7 @@
     <header>
         <nav aria-label="Navigation principale">
             <img src="./src/img/ville_de_melun.png" alt="Logo Ville de Melun" width="200">
-            <ul>
+            <ul id="primary-menu">
                 <li><a href="index.html" aria-current="page">Accueil</a></li>
                 <li><a href="#actualites-titre">Actualités</a></li>
                 <li><a href="#agenda-titre">Agenda</a></li>
@@ -44,55 +44,61 @@
                 <li><a href="#publications-titre">Publications</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">
-                <span>☰</span>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Menu principal">
+                <span class="menu-icon">☰</span>
+                <span class="sr-only menu-text">Ouvrir le menu principal</span>
             </button>
         </nav>
     </header>
     <main id="main-content" aria-live="polite">
-        <section class="carousel" aria-labelledby="carousel-heading" aria-live="polite">
+        <section class="carousel" aria-labelledby="carousel-heading">
             <h2 id="carousel-heading" class="sr-only">Actualités principales</h2>
-            <div class="carousel-container" role="region" aria-roledescription="carrousel">
-                <div class="carousel-slides" aria-live="polite">
-                    <div class="slide" role="group" aria-roledescription="diapositive" aria-label="1 sur 3" id="slide1"
-                        aria-hidden="false">
+            <div class="carousel-container" role="region" aria-roledescription="carrousel"
+                aria-label="Carrousel d'actualités">
+                <div class="carousel-status sr-only" aria-live="polite" id="carousel-live-region">
+                    Diapositive 1 sur 3 affichée : Ville de Melun - La ville de Melun est une commune française située
+                    dans le département de Seine-et-Marne
+                </div>
+                <div class="carousel-slides">
+                    <div class="slide" role="tabpanel" aria-labelledby="slide1-heading" id="slide1" aria-hidden="false">
                         <div class="slide-content">
-                            <h2>Ville de Melun</h2>
+                            <h2 id="slide1-heading">Ville de Melun</h2>
                             <p>La ville de Melun est une commune française située dans le département de Seine-et-Marne
                             </p>
                         </div>
                     </div>
-                    <div class="slide" role="group" aria-roledescription="diapositive" aria-label="2 sur 3" id="slide2"
-                        aria-hidden="true">
+                    <div class="slide" role="tabpanel" aria-labelledby="slide2-heading" id="slide2" aria-hidden="true">
                         <div class="slide-content">
-                            <h2>Actualités culturelles</h2>
+                            <h2 id="slide2-heading">Actualités culturelles</h2>
                             <p>Découvrez les événements et initiatives culturelles de la ville</p>
                         </div>
                     </div>
-                    <div class="slide" role="group" aria-roledescription="diapositive" aria-label="3 sur 3" id="slide3"
-                        aria-hidden="true">
+                    <div class="slide" role="tabpanel" aria-labelledby="slide3-heading" id="slide3" aria-hidden="true">
                         <div class="slide-content">
-                            <h2>Services aux citoyens</h2>
+                            <h2 id="slide3-heading">Services aux citoyens</h2>
                             <p>Informations et ressources pour les habitants de Melun</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="carousel-controls">
-                    <button class="prev" aria-label="Diapositive précédente">
+                <div class="carousel-controls" aria-label="Contrôles du carrousel">
+                    <button class="prev" aria-label="Voir la diapositive précédente"
+                        aria-controls="carousel-live-region">
                         <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24">
                             <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"></path>
                         </svg>
                     </button>
-                    <div class="carousel-dots" role="tablist" aria-label="Sélecteur de diapositives">
-                        <button role="tab" aria-selected="true" aria-label="Diapositive 1"
-                            aria-controls="slide1"></button>
-                        <button role="tab" aria-selected="false" aria-label="Diapositive 2"
+                    <div class="carousel-dots" role="tablist" aria-label="Sélection de diapositives">
+                        <button id="tab1" role="tab" aria-selected="true"
+                            aria-label="Afficher la diapositive 1 : Ville de Melun" aria-controls="slide1"></button>
+                        <button id="tab2" role="tab" aria-selected="false"
+                            aria-label="Afficher la diapositive 2 : Actualités culturelles"
                             aria-controls="slide2"></button>
-                        <button role="tab" aria-selected="false" aria-label="Diapositive 3"
+                        <button id="tab3" role="tab" aria-selected="false"
+                            aria-label="Afficher la diapositive 3 : Services aux citoyens"
                             aria-controls="slide3"></button>
                     </div>
-                    <button class="next" aria-label="Diapositive suivante">
+                    <button class="next" aria-label="Voir la diapositive suivante" aria-controls="carousel-live-region">
                         <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24">
                             <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"></path>
                         </svg>
@@ -459,11 +465,19 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to top button - fixed element outside footer -->
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut de la page" tabindex="0">
+        <span class="arrow" aria-hidden="true">↑</span>
+        <span class="sr-only">Retour en haut</span>
+    </button>
+
     <script src="./src/js/carousel.js"></script>
     <script src="./src/js/focus-manager.js"></script>
     <script src="./src/js/accessibility.js"></script>
     <script src="./src/js/navigation.js"></script>
     <script src="./src/js/cookies.js"></script>
+    <script src="./src/js/back-to-top.js"></script>
 </body>
 
 </html>

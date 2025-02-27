@@ -37,14 +37,32 @@ nav {
 	font-weight: bold;
 }
 
+/* Updated menu toggle button styles for accessibility */
 .menu-toggle {
-	display: none;
+	display: none; /* Hide by default on all screens */
 	background: transparent;
-	border: none;
+	border: 2px solid #fff;
+	border-radius: 4px;
 	color: white;
 	font-size: 1.5rem;
 	cursor: pointer;
 	padding: 0.5rem;
+	min-width: 44px;
+	min-height: 44px;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	outline: 3px solid #ffbf47;
+	outline-offset: 2px;
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle[aria-expanded="true"] {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .menu-toggle:focus,
@@ -127,6 +145,18 @@ nav ul li a[aria-current="page"]:focus {
 	background-color: #1a73e8;
 }
 
+/* Menu announcement area for screen readers */
+#menu-announcement {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
 /* Responsive navigation for mobile devices */
 @media (max-width: 1165px) {
 	header {
@@ -138,7 +168,7 @@ nav ul li a[aria-current="page"]:focus {
 	}
 
 	.menu-toggle {
-		display: block;
+		display: flex; /* Only display on mobile screens */
 		z-index: 101;
 	}
 
@@ -152,12 +182,23 @@ nav ul li a[aria-current="page"]:focus {
 		width: 80%;
 		max-width: 300px;
 		padding: 5rem 2rem 2rem;
-		transition: right 0.3s ease;
+		transition: right 0.3s ease, visibility 0.3s ease;
 		gap: 1.5rem;
 		z-index: 100;
 		justify-content: flex-start;
 		align-items: flex-start;
 		box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+		visibility: visible;
+	}
+
+	nav ul[aria-hidden="true"] {
+		right: -100%;
+		visibility: hidden;
+	}
+
+	nav ul[aria-hidden="false"] {
+		right: 0;
+		visibility: visible;
 	}
 
 	nav ul.active {
@@ -341,6 +382,10 @@ nav ul li a[aria-current="page"]:focus {
 /* Carousel/Hero Navigation Enhancements - modified to remove outline on hover */
 .carousel-controls button:hover {
 	background: #1a73e8; /* Blue background on hover */
+	/* No outline on hover */
+}
+.carousel-controls button svg:hover {
+	color: white; /* Blue background on hover */
 	/* No outline on hover */
 }
 
@@ -1298,4 +1343,34 @@ magazine-card:focus-within {
 	.city-info td {
 		padding: 0.75rem;
 	}
+}
+
+/* Screen reader only class */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+/* Updated carousel styles for accessibility */
+.carousel-container {
+	position: relative;
+}
+
+.carousel-status {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }
