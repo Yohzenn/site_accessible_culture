@@ -124,7 +124,7 @@ nav ul li a[aria-current="page"]:focus {
 }
 
 /* Responsive navigation for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 1165px) {
 	header {
 		height: auto;
 	}
