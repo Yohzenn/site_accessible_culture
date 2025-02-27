@@ -42,7 +42,7 @@ form {
     font-weight: bold;
   }
 
-  input, select, textarea, button {
+  input, select, textarea, #btn {
     width: 100%;
     padding: 10px;
     border: 1px solid  #EFEFEF;
@@ -51,7 +51,7 @@ form {
     background-color: #FAFAFA;
   }
 
-  button {
+  #btn {
     background-color: #10162F;
     color: white;
     font-size: 16px;
@@ -59,7 +59,7 @@ form {
     border: none;
   }
 
-  button:hover {
+  #btn:hover {
     background-color: #0056b3;
   }
 
