@@ -81,3 +81,33 @@ footer h1 {
 	flex-direction: column;
 	justify-content: flex-start;
 }
+
+@media screen and (max-width: 1000px) {
+	footer {
+		flex-direction: column;
+		gap: 2rem;
+		height: 100%;
+		padding-bottom: 2rem;
+	}
+
+	.footer-content {
+		align-items: center;
+	}
+
+	.footer-text {
+		align-items: center;
+	}
+
+	.footer-logo {
+		align-items: center;
+	}
+
+	.social {
+		justify-content: center;
+	}
+
+	.footer-contact {
+		align-items: center;
+	}
+	
+}
