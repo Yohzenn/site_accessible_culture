@@ -77,7 +77,7 @@ nav a {
 }
 
 .menu-toggle:focus,
-.menu-toggle:hover {
+menu-toggle:hover {
 	outline: 3px solid #ffbf47;
 	outline-offset: 2px;
 	text-decoration: none;
@@ -1213,4 +1213,89 @@ magazine-card:focus-within {
 .high-contrast .magazine-card {
 	background-color: #222;
 	border: 1px solid #fff;
+}
+
+/* City Information Table Styles */
+.city-info {
+	padding: 2rem 0;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.city-info h2 {
+	margin-bottom: 1.5rem;
+	font-size: 2rem;
+	text-align: center;
+	color: #333;
+}
+
+.table-container {
+	overflow-x: auto;
+	margin: 0 auto;
+	max-width: 800px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+}
+
+.city-info table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+.city-info caption {
+	padding: 1rem;
+	background-color: #0066cc;
+	color: white;
+	font-weight: bold;
+	font-size: 1.1rem;
+	border-radius: 8px 8px 0 0;
+}
+
+.city-info th,
+.city-info td {
+	padding: 1rem;
+	text-align: left;
+	border-bottom: 1px solid #eee;
+}
+
+.city-info thead tr {
+	background-color: #f5f5f5;
+}
+
+.city-info tbody tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.city-info tbody tr:hover {
+	background-color: #f0f7ff;
+}
+
+.city-info th[scope="col"] {
+	background-color: #e6e6e6;
+	border-bottom: 2px solid #ddd;
+}
+
+.city-info th[scope="row"] {
+	font-weight: 600;
+	color: #0066cc;
+	width: 40%;
+}
+
+.city-info a {
+	color: #0066cc;
+	text-decoration: none;
+}
+
+.city-info a:hover,
+.city-info a:focus {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+	.city-info th,
+	.city-info td {
+		padding: 0.75rem;
+	}
 }
